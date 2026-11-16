@@ -1,12 +1,14 @@
-# Thaumaturge Integrations
+# Arcane Syntax
 
-Integrations developed for [Eldritch Aeons](https://github.com/PhaedrusXY/Eldritch_Aeons). The first module is **Arcane Syntax: Unified Casting**, which brings learned Build a Spell components into Thaumaturge's focus, wand, research, and Vis systems.
+> One wand. Two grammars of magic.
+
+**Arcane Syntax** integrates learned Build a Spell components with Thaumaturge's native focus, wand, research, and Vis systems. It is developed alongside [Eldritch Aeons](https://github.com/PhaedrusXY/Eldritch_Aeons), while retaining its own source and release identity.
 
 **Current development version: 0.2.1 — experimental Thaumaturge 1.1.0 compatibility candidate.** Initial in-game testing is underway. This is source and development documentation, not an announcement of a new public Eldritch Aeons release.
 
-The repository name is `Thaumaturge_integrations`; the existing mod ID remains `arcane_syntax_unified` so saved data, resources, and dependency references stay stable.
+The public project name is **Arcane Syntax**. Its existing internal mod ID remains `arcane_syntax_unified` to preserve saved data, resource locations, configuration compatibility, and mod dependencies.
 
-## Unified casting
+## Casting and progression
 
 - Learn individual concepts permanently from crafted Inscribed Runes; Blank Runes remain part of progression.
 - Compose a Syntax spell in Thaumaturge's Focal Manipulator, finish inscribing it onto a native focus, then cast it through a native wand or staff.
@@ -46,7 +48,7 @@ See [testing status](docs/TESTING_STATUS.md), [architecture](docs/ARCHITECTURE.m
 
 ## Source and builds
 
-The source snapshot is Arcane Syntax Unified 0.2.1. Build instructions and dependency filenames are retained with the project. Third-party dependency JARs, game saves, account files, and raw player logs are not part of this repository.
+The source snapshot is Arcane Syntax 0.2.1. Build instructions and dependency filenames are retained with the project. Third-party dependency JARs, game saves, account files, and raw player logs are not part of this repository.
 
 The existing distributed test JAR was an **offline compatibility port**, not a complete dependency-resolved NeoForge rebuild. Historical reports record 4,656 dependency-free core assertions and 971 pack-script assertions against API-shaped mocks. These are not proof of full game compatibility. Initial user testing subsequently confirmed loading and research visibility; comprehensive casting, progression, multiplayer, and input regression testing remain open.
 

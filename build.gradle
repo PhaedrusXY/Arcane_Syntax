@@ -41,7 +41,7 @@ tasks.register('coreTest', JavaExec) {
 tasks.named('check') { dependsOn tasks.named('coreTest') }
 tasks.named('jar') {
     manifest.attributes(
-        'Implementation-Title': 'Arcane Syntax: Unified Casting',
+        'Implementation-Title': 'Arcane Syntax',
         'Implementation-Version': project.version,
         'Implementation-Vendor': 'PhaedrusXY',
         'Build-Verification': 'NeoForge compile; live game testing still required'

@@ -13,6 +13,6 @@ public final class ArcaneSyntaxUnified {
     public ArcaneSyntaxUnified(IEventBus modBus, ModContainer container) {
         container.registerConfig(ModConfig.Type.SERVER, IntegrationConfig.SPEC, "arcane-syntax-unified-server.toml");
         LOG.log(System.Logger.Level.INFO,
-                "Arcane Syntax Unified 0.2.1 compatibility test: native focus bridge for Thaumaturge 1.1.0 / Build a Spell 1.0.3");
+                "Arcane Syntax 0.2.1 compatibility test: native focus bridge for Thaumaturge 1.1.0 / Build a Spell 1.0.3");
     }
 }

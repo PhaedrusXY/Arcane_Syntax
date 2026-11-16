@@ -42,7 +42,7 @@ def main():
     mainclass = 'com/phaedrusxy/arcanesyntax/ArcaneSyntaxUnified.class'
     entries[mainclass], count = rewrite_utf(entries[mainclass], {
         'Arcane Syntax Unified 0.2.0 focus migration: native focus bridge for Thaumaturge 1.0.2 / Build a Spell 1.0.3':
-        'Arcane Syntax Unified 0.2.1 compatibility test: native focus bridge for Thaumaturge 1.1.0 / Build a Spell 1.0.3'})
+        'Arcane Syntax 0.2.1 compatibility test: native focus bridge for Thaumaturge 1.1.0 / Build a Spell 1.0.3'})
     assert count
     with tempfile.TemporaryDirectory(prefix='asu-core-') as temporary:
         compiled = Path(temporary)
@@ -57,7 +57,7 @@ def main():
     for p in resources.rglob('*'):
         if p.is_file(): entries[p.relative_to(resources).as_posix()] = p.read_bytes()
     entries['META-INF/MANIFEST.MF'] = (
-        'Manifest-Version: 1.0\r\nImplementation-Title: Arcane Syntax Unified Casting\r\n'
+        'Manifest-Version: 1.0\r\nImplementation-Title: Arcane Syntax\r\n'
         'Implementation-Version: 0.2.1\r\nImplementation-Vendor: PhaedrusXY\r\n'
         'Build-Verification: Experimental offline compatibility port\r\n'
         'Target-Thaumaturge: 1.1.0\r\n\r\n').encode()

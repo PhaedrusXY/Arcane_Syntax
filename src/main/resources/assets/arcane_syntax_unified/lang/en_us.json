@@ -1,5 +1,5 @@
 {
-  "mod.arcane_syntax_unified.name": "Arcane Syntax: Unified Casting",
+  "mod.arcane_syntax_unified.name": "Arcane Syntax",
   "spell.arcane_syntax_unified.delivery/rune.name": "Syntax: Rune",
   "spell.arcane_syntax_unified.delivery/rune.desc": "Build a Spell delivery: Rune. Uses your learned Arcane Syntax components. Compose one chain: delivery, effect, then its modifiers. Instant casting only.",
   "spell.arcane_syntax_unified.delivery/sight.name": "Syntax: Sight",

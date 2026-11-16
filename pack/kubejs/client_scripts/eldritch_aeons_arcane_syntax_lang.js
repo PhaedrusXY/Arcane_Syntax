@@ -1,4 +1,4 @@
-// Arcane Syntax Unified 0.2.1: language lives in the addon JAR.
+// Arcane Syntax 0.2.1: language lives in the addon JAR.
 // These client-only tooltip and recipe-viewer hooks remain in KubeJS.
 // Replace Build A Spell's original essence-charging tooltip. In this pack,
 // Blank Runes are neutral substrates for deliberate inscriptions and never

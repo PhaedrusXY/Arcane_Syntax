@@ -1,4 +1,4 @@
-# Arcane Syntax: Unified Casting 0.2.1 — Thaumaturge 1.1.0 test
+# Arcane Syntax 0.2.1 — Thaumaturge 1.1.0 test
 
 This is a compatibility TEST CANDIDATE for Eldritch Aeons, not a full modpack and
 not a game-tested release. It updates the existing 0.2.0 focus migration.

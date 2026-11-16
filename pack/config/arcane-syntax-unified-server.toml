@@ -1,4 +1,4 @@
-# Arcane Syntax Unified 0.2.0 - full focus migration test profile.
+# Arcane Syntax 0.2.0 - full focus migration test profile.
 # Total Vis (not per-aspect Vis) = raw BaS mana cost * this ratio.
 # Native cap/equipment discounts are applied once after conversion.
 visPerMana = 0.1

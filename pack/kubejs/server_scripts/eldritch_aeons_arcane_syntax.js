@@ -1,4 +1,4 @@
-// Eldritch Aeons - Arcane Syntax 2.0.1 / Unified Casting 0.2.1
+// Eldritch Aeons - Arcane Syntax 2.0.1 / integration addon 0.2.1
 // Permanent component knowledge is retained; focus milestones replace BaS wand ownership.
 (function() {
   if (typeof Java === 'undefined') return // KubeThaum's isolated syntax checker has no Java bridge.
@@ -125,7 +125,7 @@
     if (player == null) return 'Run this command in-game.'
     scan(player)
     var d=data(player), tier=storedTier(player)
-    player.tell('§dArcane Syntax 2.0.1 / Unified Casting 0.2.1')
+    player.tell('§dArcane Syntax 2.0.1 / integration addon 0.2.1')
     player.tell('§7Learning milestone: §f' + TIER_NAMES[tier] + '§7; casting uses the actual socketed focus tier.')
     player.tell('§7Knowledge: §f' + d.getUnlockedDeliveryMethods().size() + ' deliveries, ' + d.getUnlockedEffects().size() + ' effects, ' + d.getUnlockedModifiers().size() + ' modifiers.')
     return 1
