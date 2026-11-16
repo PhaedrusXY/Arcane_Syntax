@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "Arcane Syntax Unified 0.2.1: Thaumaturge 1.1.0 compatibility test",
+    "min_format": 84,
+    "max_format": [
+      101,
+      1
+    ]
+  }
+}

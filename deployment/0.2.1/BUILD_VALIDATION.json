@@ -1,0 +1,110 @@
+{
+  "base_jar_sha256": "74c3194d8f95b1b2662c0bf647da7dfaad82ca37f4333e64e719a08d9eea1ba1",
+  "output_jar_sha256": "ff38a038e34a40a5ce183d51d306ebcfda42c969c0b20efa99ea5430a83f1a7f",
+  "build_method": "Reuse 0.2.0 addon classes; recompile dependency-free core with javac --release 21; update five WandVisHelper symbol names in SyntaxBridge constant pool; replace metadata and bundled resources. No full NeoForge build.",
+  "helper_descriptor_changes": false,
+  "bridge_instruction_bytes_changed": false,
+  "recompiled_classes": [
+    "com/phaedrusxy/arcanesyntax/core/CostMath.class",
+    "com/phaedrusxy/arcanesyntax/core/PlanCompiler.class",
+    "com/phaedrusxy/arcanesyntax/core/SpellPlan.class",
+    "com/phaedrusxy/arcanesyntax/core/SpellPlan$Instruction.class",
+    "com/phaedrusxy/arcanesyntax/core/PlanCompiler$InvalidSpell.class",
+    "com/phaedrusxy/arcanesyntax/core/Catalog.class",
+    "com/phaedrusxy/arcanesyntax/core/Catalog$Kind.class",
+    "com/phaedrusxy/arcanesyntax/core/PlanCompiler$Node.class",
+    "com/phaedrusxy/arcanesyntax/core/TierRules.class",
+    "com/phaedrusxy/arcanesyntax/core/PaymentReceipt.class",
+    "com/phaedrusxy/arcanesyntax/core/Catalog$Entry.class"
+  ],
+  "renamed_method_references_before": [
+    [
+      10,
+      "com/leclowndu93150/thaumaturge/content/wands/WandVisHelper",
+      "consumeAllVis",
+      "(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;Ljava/util/Map;ZZ)Z"
+    ],
+    [
+      10,
+      "com/leclowndu93150/thaumaturge/content/wands/WandVisHelper",
+      "getAllVis",
+      "(Lnet/minecraft/world/item/ItemStack;)Lcom/leclowndu93150/thaumaturge/api/wands/WandVis;"
+    ],
+    [
+      10,
+      "com/leclowndu93150/thaumaturge/content/wands/WandVisHelper",
+      "getConsumptionModifier",
+      "(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/resources/ResourceKey;Z)F"
+    ],
+    [
+      10,
+      "com/leclowndu93150/thaumaturge/content/wands/WandVisHelper",
+      "getVis",
+      "(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/resources/ResourceKey;)I"
+    ],
+    [
+      10,
+      "com/leclowndu93150/thaumaturge/content/wands/WandVisHelper",
+      "setAllVis",
+      "(Lnet/minecraft/world/item/ItemStack;Lcom/leclowndu93150/thaumaturge/api/wands/WandVis;)V"
+    ]
+  ],
+  "renamed_method_references_after": [
+    [
+      10,
+      "com/leclowndu93150/thaumaturge/content/wands/WandVisHelper",
+      "chargeOf",
+      "(Lnet/minecraft/world/item/ItemStack;)Lcom/leclowndu93150/thaumaturge/api/wands/WandVis;"
+    ],
+    [
+      10,
+      "com/leclowndu93150/thaumaturge/content/wands/WandVisHelper",
+      "costFactor",
+      "(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/resources/ResourceKey;Z)F"
+    ],
+    [
+      10,
+      "com/leclowndu93150/thaumaturge/content/wands/WandVisHelper",
+      "payCosts",
+      "(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;Ljava/util/Map;ZZ)Z"
+    ],
+    [
+      10,
+      "com/leclowndu93150/thaumaturge/content/wands/WandVisHelper",
+      "storedIn",
+      "(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/resources/ResourceKey;)I"
+    ],
+    [
+      10,
+      "com/leclowndu93150/thaumaturge/content/wands/WandVisHelper",
+      "writeCharge",
+      "(Lnet/minecraft/world/item/ItemStack;Lcom/leclowndu93150/thaumaturge/api/wands/WandVis;)V"
+    ]
+  ],
+  "class_count": 29,
+  "resource_count": 166,
+  "outer_lands_templates_in_jar": 0,
+  "source_audit_basis": "Thaumaturge public main branch inspected in this conversation; gradle.properties identifies mod_version=1.1.0. Not the user installed binary.",
+  "unperformed": [
+    "Full dependency-resolved NeoForge compile",
+    "Binary linkage check against Thaumaturge 1.1.0 JAR",
+    "Mixin transformation",
+    "Minecraft startup or gameplay",
+    "Automatic installer execution on Windows"
+  ],
+  "core_test_assertions": 4656,
+  "pack_mock_assertions": 971,
+  "reproduced_entry_identical": true,
+  "source_build_helper_included": "tools/build_offline_candidate.py",
+  "final_archive_checks": {
+    "crc": "pass",
+    "json_files_parsed": 86,
+    "metadata": "pass",
+    "script_syntax": "pass",
+    "payload_hashes": "pass",
+    "source_reproduction_entries": "identical",
+    "no_test_or_platform_classes": "pass",
+    "no_outer_lands_templates": "pass",
+    "packaged_jar_core_tests": "4656 passed; final JAR first on classpath"
+  }
+}

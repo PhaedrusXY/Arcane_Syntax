@@ -1,0 +1,1 @@
+See ABI_REPORT.json and VALIDATION.md. Exact mod references and injection descriptors pass; external GUI visibility remains an explicitly noted assumption. This is not a full NeoForge build or game launch.

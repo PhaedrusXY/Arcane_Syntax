@@ -1,0 +1,20 @@
+{
+  "behavior": {
+    "type": "thaumaturge:scripted_effect",
+    "key": "arcane_syntax_unified:effect/pickup",
+    "widens": false
+  },
+  "icon": "thaumaturge:textures/foci/break.png",
+  "color": 10913211,
+  "complexity": 2,
+  "settings": [
+    {
+      "key": "stacks",
+      "min": 1,
+      "max": 16,
+      "default": 1,
+      "step": 1,
+      "complexity": 1.0
+    }
+  ]
+}

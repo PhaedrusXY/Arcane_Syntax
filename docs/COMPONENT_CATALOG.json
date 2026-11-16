@@ -1,0 +1,458 @@
+[
+  {
+    "kind": "delivery",
+    "id": "rune",
+    "enum": "RUNE",
+    "stackable": false
+  },
+  {
+    "kind": "delivery",
+    "id": "sight",
+    "enum": "SIGHT",
+    "stackable": false
+  },
+  {
+    "kind": "delivery",
+    "id": "self",
+    "enum": "SELF",
+    "stackable": false
+  },
+  {
+    "kind": "delivery",
+    "id": "cast",
+    "enum": "CAST",
+    "stackable": false
+  },
+  {
+    "kind": "delivery",
+    "id": "tracking",
+    "enum": "TRACKING",
+    "stackable": false
+  },
+  {
+    "kind": "delivery",
+    "id": "touch",
+    "enum": "TOUCH",
+    "stackable": false
+  },
+  {
+    "kind": "delivery",
+    "id": "trap",
+    "enum": "TRAP",
+    "stackable": false
+  },
+  {
+    "kind": "effect",
+    "id": "damage",
+    "enum": "DAMAGE",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "ignite",
+    "enum": "IGNITE",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "freeze",
+    "enum": "FREEZE",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "teleport",
+    "enum": "TELEPORT",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "pull",
+    "enum": "PULL",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "push",
+    "enum": "PUSH",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "yeet",
+    "enum": "YEET",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "reap",
+    "enum": "REAP",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "explosion",
+    "enum": "EXPLOSION",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "heal",
+    "enum": "HEAL",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "lightning",
+    "enum": "LIGHTNING",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "poison",
+    "enum": "POISON",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "wither",
+    "enum": "WITHER",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "saturation",
+    "enum": "SATURATION",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "launch",
+    "enum": "LAUNCH",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "light",
+    "enum": "LIGHT",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "slam",
+    "enum": "SLAM",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "levitation",
+    "enum": "LEVITATION",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "slow_fall",
+    "enum": "SLOW_FALL",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "break",
+    "enum": "BREAK",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "invisibility",
+    "enum": "INVISIBILITY",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "speed",
+    "enum": "SPEED",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "haste",
+    "enum": "HASTE",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "blink",
+    "enum": "BLINK",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "swap",
+    "enum": "SWAP",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "summon",
+    "enum": "SUMMON",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "create_water",
+    "enum": "CREATE_WATER",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "evaporate_water",
+    "enum": "EVAPORATE_WATER",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "mark",
+    "enum": "MARK",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "recall",
+    "enum": "RECALL",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "pickup",
+    "enum": "PICKUP",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "shield",
+    "enum": "SHIELD",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "conjure",
+    "enum": "CONJURE",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "growth",
+    "enum": "GROWTH",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "cleanse",
+    "enum": "CLEANSE",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "charm",
+    "enum": "CHARM",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "blind",
+    "enum": "BLIND",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "slow",
+    "enum": "SLOW",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "weaken",
+    "enum": "WEAKEN",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "strengthen",
+    "enum": "STRENGTHEN",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "regenerate",
+    "enum": "REGENERATE",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "resist",
+    "enum": "RESIST",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "night_vision",
+    "enum": "NIGHT_VISION",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "water_breathing",
+    "enum": "WATER_BREATHING",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "root",
+    "enum": "ROOT",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "grapple",
+    "enum": "GRAPPLE",
+    "stackable": true
+  },
+  {
+    "kind": "effect",
+    "id": "gust",
+    "enum": "GUST",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "increased_area",
+    "enum": "INCREASED_AREA",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "increased_power",
+    "enum": "INCREASED_POWER",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "nullify",
+    "enum": "NULLIFY",
+    "stackable": false
+  },
+  {
+    "kind": "modifier",
+    "id": "gentleness",
+    "enum": "GENTLENESS",
+    "stackable": false
+  },
+  {
+    "kind": "modifier",
+    "id": "fortunate_son",
+    "enum": "FORTUNATE_SON",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "double",
+    "enum": "DOUBLE",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "echo",
+    "enum": "ECHO",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "prolonged",
+    "enum": "PROLONGED",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "delay",
+    "enum": "DELAY",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "chain",
+    "enum": "CHAIN",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "pierce",
+    "enum": "PIERCE",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "bounce",
+    "enum": "BOUNCE",
+    "stackable": false
+  },
+  {
+    "kind": "modifier",
+    "id": "accelerate",
+    "enum": "ACCELERATE",
+    "stackable": false
+  },
+  {
+    "kind": "modifier",
+    "id": "duration",
+    "enum": "DURATION",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "linger",
+    "enum": "LINGER",
+    "stackable": false
+  },
+  {
+    "kind": "modifier",
+    "id": "split",
+    "enum": "SPLIT",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "wall",
+    "enum": "WALL",
+    "stackable": false
+  },
+  {
+    "kind": "modifier",
+    "id": "floor",
+    "enum": "FLOOR",
+    "stackable": false
+  },
+  {
+    "kind": "modifier",
+    "id": "fill",
+    "enum": "FILL",
+    "stackable": false
+  },
+  {
+    "kind": "modifier",
+    "id": "leech",
+    "enum": "LEECH",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "sunder",
+    "enum": "SUNDER",
+    "stackable": true
+  },
+  {
+    "kind": "modifier",
+    "id": "return",
+    "enum": "RETURN",
+    "stackable": false
+  }
+]

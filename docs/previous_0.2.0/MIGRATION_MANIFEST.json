@@ -1,0 +1,29 @@
+{
+  "addon_version": "0.2.0",
+  "pack_script_version": "2.0.0",
+  "changed_kubejs_paths": [
+    "client_scripts/eldritch_aeons_arcane_syntax_lang.js",
+    "client_scripts/eldritch_aeons_draconic_artifice_lang.js",
+    "client_scripts/zz_arcane_syntax_runic_mastery_121_lang.js",
+    "data/buildaspell/enchantment/mana_pool.json",
+    "data/buildaspell/enchantment/mana_regeneration.json",
+    "data/kubejs/tags/item/retired_mana_enchantable.json",
+    "data/minecraft/tags/item/enchantable/weapon.json",
+    "data/thaumaturge/thaumaturge/research_entry/focus_advanced.json",
+    "data/thaumaturge/thaumaturge/research_entry/focus_greater.json",
+    "server_scripts/eldritch_aeons_arcane_syntax.js",
+    "server_scripts/eldritch_aeons_arcane_syntax_recipes.js",
+    "server_scripts/eldritch_aeons_arcane_syntax_research.js",
+    "server_scripts/eldritch_aeons_draconic_artifice.js",
+    "server_scripts/zz_arcane_syntax_runic_mastery_121.js",
+    "startup_scripts/00_eldritch_aeons_arcane_syntax_items.js"
+  ],
+  "source_server_archive_sha256": "29b2ae5071b866540c43bc9e917bd3760e0d8dd56be1fa376f7acf5d3f5232ed",
+  "unchanged_buildaspell_config_sha256": {
+    "effects.toml": "f6cafe1ac732ad79a5d215ac93e5921dfb37550e965bfa3bb454294e495d2c58",
+    "wands.toml": "fcb9a327d84215114b2982bbd4492a32410235769e5b1b5d8a67a79e3c7bad8b",
+    "deliveries.toml": "ecea73eec68c3254589ccce16933870fbbf3f811c754e3a451ffb0bda69b81f4",
+    "modifiers.toml": "6ee5f89e80a04e0b09430334d4b9d797d5c3bdaa5933ba42fa470766707d0667",
+    "general.toml": "0b99ae947e48a0fc7f10665c9ebaebc08ad025f0e76a5ff0c252c829a68af29a"
+  }
+}

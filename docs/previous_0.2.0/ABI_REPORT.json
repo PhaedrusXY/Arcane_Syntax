@@ -1,0 +1,226 @@
+{
+  "input_sha256": {
+    "buildaspell-1.0.3-mc26.1.2.jar": "b480ad587907c01b4f0e5e1f09b39b1c14d575cbd9b5798a9f59bc13cc61ed86",
+    "thaumaturge-26.1.2-NeoForge-1.0.2.jar": "74a7ce4995bdf59a23d1a5f70115eca868f1545fde0aa231e7e2a1c1c0989daa",
+    "bas_shield_fix-1.1.2.jar": "36fde00acb09a73deb887d456ecfd5386f00ad5491c8fc5fb7e25688f8554210",
+    "arcane_syntax_unified-0.1.0-prototype.jar": "7f45222a2057b9af4f1b2b18beae1192049c62d77dc1e890aaeb6cb04c649df1",
+    "kubethaum-26.1.2-1.1.jar": "4af0396c66a44d8473590b0e74a08e3b1d79b5a069fc9a66a5e618c141898cbe"
+  },
+  "own_classes": 29,
+  "verified_own_and_mod_references": 179,
+  "matched_external_symbolic_references": 35,
+  "unverified_external": [
+    [
+      9,
+      "net/minecraft/client/gui/components/Button",
+      "visible",
+      "Z"
+    ]
+  ],
+  "missing_mod_members": [],
+  "injections": [
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/PartPaletteMixin",
+      "method": "syntax$filterLearned",
+      "target": "com/leclowndu93150/thaumaturge/client/screen/casters/focal/PartPalette.refresh()V",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/SpellCastingMixin",
+      "method": "syntax$cast",
+      "target": "com/leclowndu93150/thaumaturge/content/spell/casting/SpellCasting.cast(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lcom/leclowndu93150/thaumaturge/api/spell/Spell;Lcom/leclowndu93150/thaumaturge/api/spell/SpellSummary;FF)Z",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/SpellCastingMixin",
+      "method": "syntax$instantOnly",
+      "target": "com/leclowndu93150/thaumaturge/content/spell/casting/SpellCasting.use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/InteractionResult;",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/RandomRuneMixin",
+      "method": "syntax$noRandomKnowledge",
+      "target": "buildaspell/item/SpellRuneItem.use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/ArcaneAltarScreenMixin",
+      "method": "syntax$powerOnly",
+      "target": "buildaspell/client/gui/ArcaneAltarScreen.init()V",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/ArcaneAltarScreenMixin",
+      "method": "syntax$powerOnly",
+      "target": "buildaspell/client/gui/ArcaneAltarScreen.containerTick()V",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/StockProgressionMixin",
+      "method": "syntax$learnFromRunes",
+      "target": "buildaspell/events/ServerEvents.grantStarterKit(Lbuildaspell/spell/PlayerSpellData;)V",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/StockProgressionMixin",
+      "method": "syntax$useThaumonomicon",
+      "target": "buildaspell/events/ServerEvents.grantGuidebook(Lnet/minecraft/server/level/ServerPlayer;)Z",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/LegacyCastingMixin",
+      "method": "syntax$nativeWandsOnly",
+      "target": "buildaspell/spell/execution/SpellExecutor.executeSpell(Lnet/minecraft/world/entity/player/Player;Lbuildaspell/spell/Spell;Z)Z",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/SpellAnalyzerMixin",
+      "method": "syntax$analyze",
+      "target": "com/leclowndu93150/thaumaturge/content/spell/engine/SpellAnalyzer.analyze(Lcom/leclowndu93150/thaumaturge/api/spell/Spell;Lcom/leclowndu93150/thaumaturge/api/spell/FocusTier;Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/world/entity/player/Player;)Lcom/leclowndu93150/thaumaturge/api/spell/SpellSummary;",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/ManaHudMixin",
+      "method": "syntax$hideUnusedPool",
+      "target": "buildaspell/client/gui/ManaBarOverlay.render(Lnet/minecraft/client/gui/GuiGraphicsExtractor;Lnet/minecraft/client/DeltaTracker;)V",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/ManaHudMixin",
+      "method": "syntax$hidden",
+      "target": "buildaspell/client/gui/ManaBarOverlay.isVisible()Z",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/ArcaneAltarMixin",
+      "method": "syntax$powerOnly",
+      "target": "buildaspell/block/entity/ArcaneAltarBlockEntity.isValidEnchantTarget(Lnet/minecraft/resources/Identifier;Lnet/minecraft/world/item/ItemStack;)Z",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/ArcaneAltarMixin",
+      "method": "syntax$acceptWands",
+      "target": "buildaspell/block/entity/ArcaneAltarBlockEntity.isEnchantableTarget(Lnet/minecraft/world/item/ItemStack;)Z",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/LegacyControlsMixin",
+      "method": "syntax$focusControls",
+      "target": "buildaspell/client/KeyInputHandler.handleKeyInput()V",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/LegacyWandMixin",
+      "method": "syntax$retired",
+      "target": "buildaspell/item/WandItem.use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/LegacyWandMixin",
+      "method": "syntax$focusPower",
+      "target": "buildaspell/item/WandItem.heldSpellPowerBonus(Lnet/minecraft/world/entity/player/Player;)F",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/LegacyWandMixin",
+      "method": "syntax$noLegacyDiscount",
+      "target": "buildaspell/item/WandItem.heldDiscountMultiplier(Lnet/minecraft/world/entity/player/Player;)F",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/LegacyScreenMixin",
+      "method": "syntax$noSeparateEditor",
+      "target": "buildaspell/client/ClientScreenOpener.openSpellBuilder(Lbuildaspell/network/OpenSpellBuilderScreenPacket;)V",
+      "static_matches": true,
+      "args_match": true,
+      "callback_matches": true
+    }
+  ],
+  "shadows": [
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/PartPaletteMixin",
+      "field": "host",
+      "descriptor": "Lcom/leclowndu93150/thaumaturge/client/screen/casters/focal/DraftHost;",
+      "valid": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/PartPaletteMixin",
+      "field": "entries",
+      "descriptor": "Ljava/util/List;",
+      "valid": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/PartPaletteMixin",
+      "field": "scroll",
+      "descriptor": "I",
+      "valid": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/ArcaneAltarScreenMixin",
+      "field": "manaPoolBtn",
+      "descriptor": "Lnet/minecraft/client/gui/components/Button;",
+      "valid": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/ArcaneAltarScreenMixin",
+      "field": "manaRegenBtn",
+      "descriptor": "Lnet/minecraft/client/gui/components/Button;",
+      "valid": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/ArcaneAltarScreenMixin",
+      "field": "helpBtn",
+      "descriptor": "Lnet/minecraft/client/gui/components/Button;",
+      "valid": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/ArcaneAltarScreenMixin",
+      "field": "selectedEnchantment",
+      "descriptor": "Lnet/minecraft/resources/Identifier;",
+      "valid": true
+    },
+    {
+      "mixin": "com/phaedrusxy/arcanesyntax/mixin/ArcaneAltarScreenMixin",
+      "field": "showHelp",
+      "descriptor": "Z",
+      "valid": true
+    }
+  ],
+  "errors": []
+}

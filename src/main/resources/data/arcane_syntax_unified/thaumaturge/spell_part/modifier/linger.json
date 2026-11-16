@@ -1,0 +1,11 @@
+{
+  "behavior": {
+    "type": "thaumaturge:scripted_modifier",
+    "key": "arcane_syntax_unified:modifier/linger",
+    "max_children": 1,
+    "standalone": true
+  },
+  "icon": "thaumaturge:textures/foci/potency.png",
+  "color": 8494258,
+  "complexity": 1
+}

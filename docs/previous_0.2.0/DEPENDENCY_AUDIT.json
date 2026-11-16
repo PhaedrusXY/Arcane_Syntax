@@ -1,0 +1,27 @@
+{
+  "description": "Static resource/dependency audit; excludes live progression and ingredient acquisition.",
+  "native_and_custom_entries": 218,
+  "recipes_in_audit": 597,
+  "modified_parent_closure_checked": 19,
+  "syntax_book_recipe_references_verified": 32,
+  "old_wand_dependencies": 0,
+  "focus_recipe_gates": [
+    {
+      "recipe": "thaumaturge:crucible/focus_1",
+      "gate": "thaumaturge:unlock_auromancy"
+    },
+    {
+      "recipe": "kubejs:arcane_blank_runes",
+      "gate": "kubejs:resonant_casting"
+    },
+    {
+      "recipe": "thaumaturge:infusion/focus_2",
+      "gate": "kubejs:names_and_natures"
+    },
+    {
+      "recipe": "thaumaturge:infusion/focus_3",
+      "gate": "kubejs:infused_syntax"
+    }
+  ],
+  "errors": []
+}

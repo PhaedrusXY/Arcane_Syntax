@@ -1,0 +1,22 @@
+{
+  "description": {
+    "translate": "enchantment.buildaspell.mana_regeneration"
+  },
+  "supported_items": "#kubejs:retired_mana_enchantable",
+  "weight": 5,
+  "max_level": 255,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 1
+  },
+  "max_cost": {
+    "base": 1,
+    "per_level_above_first": 1
+  },
+  "anvil_cost": 1,
+  "slots": [
+    "armor"
+  ],
+  "effects": {},
+  "primary_items": "#kubejs:retired_mana_enchantable"
+}

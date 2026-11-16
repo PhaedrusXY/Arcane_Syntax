@@ -1,0 +1,21 @@
+{
+  "behavior": {
+    "type": "thaumaturge:scripted_modifier",
+    "key": "arcane_syntax_unified:modifier/sunder",
+    "max_children": 1,
+    "standalone": true
+  },
+  "icon": "thaumaturge:textures/foci/potency.png",
+  "color": 8494258,
+  "complexity": 1,
+  "settings": [
+    {
+      "key": "stacks",
+      "min": 1,
+      "max": 16,
+      "default": 1,
+      "step": 1,
+      "complexity": 1.0
+    }
+  ]
+}

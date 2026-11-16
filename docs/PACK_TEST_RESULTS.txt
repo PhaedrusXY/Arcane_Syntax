@@ -1,0 +1,1 @@
+PASS: 971 assertions (real pack scripts with API-shaped mocks; not a KubeJS/Minecraft runtime test)

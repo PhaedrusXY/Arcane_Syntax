@@ -1,0 +1,12 @@
+{
+  "behavior": {
+    "type": "thaumaturge:scripted_delivery",
+    "key": "arcane_syntax_unified:delivery/sight",
+    "max_children": 1,
+    "standalone": true
+  },
+  "icon": "thaumaturge:textures/foci/projectile.png",
+  "color": 12491621,
+  "complexity": 1,
+  "max_per_spell": 1
+}

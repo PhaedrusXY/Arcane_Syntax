@@ -1,0 +1,49 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.148'
+}
+
+group = 'com.phaedrusxy'
+version = '0.2.1'
+base { archivesName = 'arcane_syntax_unified' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
+
+neoForge {
+    version = '26.1.2.122'
+    mods {
+        arcane_syntax_unified { sourceSet sourceSets.main }
+    }
+}
+
+repositories { mavenCentral() }
+def requiredJars = [
+    'buildaspell-1.0.3-mc26.1.2.jar',
+    'thaumaturge-26.1.2-NeoForge-1.1.0.jar'
+]
+requiredJars.each { name ->
+    if (!file("libs/${name}").exists()) {
+        throw new GradleException("Missing libs/${name}. Copy the original dependency JAR into libs; do not modify it.")
+    }
+}
+dependencies { compileOnly files(requiredJars.collect { "libs/${it}" }) }
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    // All names are unobfuscated in the targeted game. Mixins explicitly use remap=false.
+    options.compilerArgs += ['-proc:none']
+}
+tasks.register('coreTest', JavaExec) {
+    dependsOn tasks.testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'com.phaedrusxy.arcanesyntax.core.CoreTests'
+    jvmArgs '-ea'
+}
+tasks.named('check') { dependsOn tasks.named('coreTest') }
+tasks.named('jar') {
+    manifest.attributes(
+        'Implementation-Title': 'Arcane Syntax: Unified Casting',
+        'Implementation-Version': project.version,
+        'Implementation-Vendor': 'PhaedrusXY',
+        'Build-Verification': 'NeoForge compile; live game testing still required'
+    )
+}

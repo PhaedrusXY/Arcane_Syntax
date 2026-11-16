@@ -1,0 +1,511 @@
+{
+  "version": "0.2.1",
+  "targetThaumaturge": "1.1.0",
+  "modJar": "mods/arcane_syntax_unified-0.2.1-thaumaturge-1.1.0-test.jar",
+  "cleanupPaths": [
+    "kubejs/data/thaumaturge/structure/outer_lands/bend/glyphs.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/bend/pillar.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/bend/rounded.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/bend/shrine.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/corridor/bend.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/corridor/cross.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/corridor/dead_end.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/corridor/straight.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/corridor/tee.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/cross/gallery.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/cross/pit.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/cross/rotunda.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/dead_end/collapsed.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/dead_end/shrine.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/dead_end/urns.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/hall/arena.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/hall/nave.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/hall/ring.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/library/archive.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/library/scriptorium.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/library/study.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/nest/crabs.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/nest/guardians.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/nest/spiders.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/passage/alcoves.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/passage/crypt.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/passage/pillared.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/passage/ribbed.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/passage/sunken.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/passage/vaulted.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/crumbling_bend.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/crumbling_straight.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/trapped_bend.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/trapped_straight.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/webbed_bend.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/webbed_straight.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/weeping_bend.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/weeping_straight.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/tee/hall.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/tee/pillared.nbt",
+    "kubejs/data/thaumaturge/structure/outer_lands/tee/shrine.nbt",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/eldritch_syntax_key.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_delivery_rune.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_delivery_self.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_delivery_sight.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_delivery_touch.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_delivery_tracking.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_delivery_trap.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_blind.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_blink.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_break.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_charm.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_cleanse.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_conjure.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_create_water.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_damage.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_evaporate_water.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_explosion.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_freeze.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_grapple.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_growth.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_gust.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_haste.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_heal.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_ignite.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_invisibility.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_launch.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_levitation.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_light.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_lightning.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_mark.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_night_vision.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_pickup.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_poison.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_pull.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_push.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_reap.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_recall.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_regenerate.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_resist.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_root.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_saturation.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_shield.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_slam.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_slow.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_slow_fall.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_speed.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_strengthen.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_summon.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_swap.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_teleport.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_water_breathing.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_weaken.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_wither.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_yeet.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_accelerate.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_bounce.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_chain.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_delay.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_double.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_duration.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_echo.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_fill.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_floor.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_fortunate_son.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_gentleness.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_increased_area.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_increased_power.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_leech.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_linger.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_nullify.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_pierce.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_prolonged.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_return.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_split.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_sunder.png",
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_wall.png",
+    "kubejs/data/buildaspell/enchantment/mana_pool.json",
+    "kubejs/data/buildaspell/enchantment/mana_regeneration.json",
+    "kubejs/data/kubejs/tags/item/retired_mana_enchantable.json",
+    "kubejs/data/minecraft/tags/item/enchantable/weapon.json",
+    "kubejs/data/thaumaturge/thaumaturge/research_entry/focus_advanced.json",
+    "kubejs/data/thaumaturge/thaumaturge/research_entry/focus_greater.json"
+  ],
+  "packageFiles": {
+    "mods/arcane_syntax_unified-0.2.1-thaumaturge-1.1.0-test.jar": "ff38a038e34a40a5ce183d51d306ebcfda42c969c0b20efa99ea5430a83f1a7f",
+    "kubejs/startup_scripts/00_eldritch_aeons_arcane_syntax_items.js": "d2efdc49974ea3022b19e6bd94ecf519dfaa9cdfc60e5a5e7e1562f78f9379f1",
+    "kubejs/server_scripts/eldritch_aeons_arcane_syntax.js": "8753d3cf394f959b98c8f23097df80e62276e2de38d6f2801b1a0ccb6957e6ca",
+    "kubejs/server_scripts/eldritch_aeons_arcane_syntax_research.js": "183ab7912b06cf795fb88eed9d4dc17efc23db258784e3e431c183fbb5ccaca5",
+    "kubejs/client_scripts/eldritch_aeons_arcane_syntax_lang.js": "510eb1622285fceaeb504163cba13e7901b12fb307f41f29a062bbe0946bdc42",
+    "kubejs/client_scripts/eldritch_aeons_draconic_artifice_lang.js": "b678d672a84812ebfd29fd80e93a774dcddee1ad5ef81cb5a6ca9965a5388a07",
+    "kubejs/client_scripts/zz_arcane_syntax_runic_mastery_121_lang.js": "194eceb6cca9c1f43ba47870ac753ea8931292febb265e063828543a049f8be8",
+    "kubejs/server_scripts/zz_arcane_syntax_runic_mastery_121.js": "194eceb6cca9c1f43ba47870ac753ea8931292febb265e063828543a049f8be8"
+  },
+  "cleanupHashes": {
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/eldritch_syntax_key.png": [
+      "efceb6f3cc5648756f6d287c6d24a96441df71be2e45c73cf02ed57a462a473d"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_delivery_rune.png": [
+      "c0fa48265e7036d18ca6f9450cae0978520e286b4c1d7b4c0568538b48df1cb8"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_delivery_self.png": [
+      "b2af3b21e0ed5d77b8df7020c7b1a88fb64682db14435df9a6cb269d23baba1f"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_delivery_sight.png": [
+      "b6497b97e89ed7b33be685b734f9072c0859be42d997a9685dafd696ede06b70"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_delivery_touch.png": [
+      "2372bae9942727c10d3888cb6ae61e3450de5336e0facd583b8042a682fcd1b6"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_delivery_tracking.png": [
+      "2996ed98bce19298fd5b09a5160e2894d6131570e54c19209ba08af13551f2cb"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_delivery_trap.png": [
+      "9e72f15655414dddf275f32d5f909e877b39f4d5d8209430972108a7a2302ea9"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_blind.png": [
+      "e8e8874bc60a227ecb3f4d66068cc2bc7d1f5fe40a6a685bd4660450c268b0c0"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_blink.png": [
+      "d5d027a19cd01ce0a975634f9c7ce98385321281d0d72645825a6c51cb37c006"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_break.png": [
+      "b241644f439eaa6f8fb0f195866448ad25f5fbef878e9415e39accce3b23850e"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_charm.png": [
+      "4251782b004391b1930800cbbc45d62faff82c6fdcd34f59b6a1c30e3cfb02b1"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_cleanse.png": [
+      "be259ff812e5c3c6e5d8ff8447a911c0ec9c1d6e42eed9274a7aeeab71392d6b"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_conjure.png": [
+      "de963ee0017c882cb2da516a95f70c3adc9af1dcb689b97f4b57b7a322b282c1"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_create_water.png": [
+      "3380ff8a635ddfbd4fb9d0309e8533110b76319522b33cb4602f99156bf9b589"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_damage.png": [
+      "50e9d275117e5f61e043c2fa19d4de901c5ab083224ba70797e7afc2778cc82c"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_evaporate_water.png": [
+      "5ad2dd36324cefe28a10c04fde1bba8f5828d93da297ac409254e78546c3b60d"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_explosion.png": [
+      "2805a281d809935c5e73190300567f4b4b951f1262569596ff1b9f9146449c63"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_freeze.png": [
+      "057cf31d9e3cd633889b086414f19cefeff985d82841489c717c7838ec597132"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_grapple.png": [
+      "23f9f63744b185b846131bb17665e91dd2a8bc80b4e1f3e1d01672b58b6a8f18"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_growth.png": [
+      "963f8e24768ea4f62d0c8579710fb6f8bc1797642b4691f9710641da4987cb40"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_gust.png": [
+      "c1806eeab8e00f7103b5fab94cc0259b2aa360d8bce24c4b38b043c40d3974b5"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_haste.png": [
+      "d89ef45533c1cf6697b63f91cf932f868dfcba5cf55d4d6874c5bc426a56b2e8"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_heal.png": [
+      "91761188ebe63f115891f2d6eb4e4cc23f133f83165e82403e15e55b2170aa19"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_ignite.png": [
+      "6cf9dddd53a7baaa921958e4cea21ae1f8941c2cdec54356bda08e659964d159"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_invisibility.png": [
+      "c818878794f3ba3f782ff0e390668c3c04ad831d9ddce803639df0c52ec75932"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_launch.png": [
+      "ef15aa93e86581f103d43fd4deb9aab73294bce16663ba61692a08c5d10c8337"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_levitation.png": [
+      "e0042bac7f1812ffe4de10723d1c593ba964fdd22f83832e9f9efe0c86c985e4"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_light.png": [
+      "f6de7331dcca05dd5ed8d5c9d05bec1689d7fdb936206aabb87ea44feddfbddd"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_lightning.png": [
+      "4b1d270b8547099204497b2bb3aa385b4872eab5d40d60c4cd2adbf250fba6a9"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_mark.png": [
+      "c3bde50b79681404a813aa1e095f55be3ca4cdd628fa6350a919a585fd9ff93b"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_night_vision.png": [
+      "f2d75129791f06300ce76651ee74d2144f6ece1aaff900fbe22cb08f02f06ae2"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_pickup.png": [
+      "0f90c05e5bc8c8d513f4378ac83cb6fe09f1d57f3bd71f5d795cdfffb1a87600"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_poison.png": [
+      "0c3e1d24bff2e8873cb7ebb5ec7596b2b055f2c151121d1937e473cf9b8f008b"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_pull.png": [
+      "32d6f6df31163d1eb1b4e13e9e7a550277d175e8466a6028e4d50f5b41841638"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_push.png": [
+      "4601091718e8fb4a6b9cf852b5a8ee31d4b9123340d9b1dca2bef2e1b6adb20c"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_reap.png": [
+      "94e3812fef789670ec196796fa37a822f53adab9cbd92ba5c91f927073f1ce56"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_recall.png": [
+      "376392a25eee91d35b6ad1875bcd994046cf89c79e465182334ad2628ac54ba6"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_regenerate.png": [
+      "23ab658bbaa58d3070967a68561d382d03990e17a143ba335c81bf999eaa4fea"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_resist.png": [
+      "7af87c5398efa2c525c63f1672a692922491acbef61711857f553d489d9ff8f3"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_root.png": [
+      "3369d8ec9e691b8aaa5d20820cdabc2cb9793de92d00fbad206823a779f99f43"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_saturation.png": [
+      "59c1d56b58b096844c3493f88ec0c35f3c34d61df03c2cbd26641020385e960f"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_shield.png": [
+      "f72220a94364a2cf94f8c685297566602ca3d87fafa4f5bb6ed793009f5fda35"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_slam.png": [
+      "22a88e3368b1166eae3e18da8b4a645000130c164c0db18480a1c2b41ddee1ca"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_slow.png": [
+      "94b0ff3679bfc8332b96d0ba7f7bcc5dbfafad95b7e95c9632f04f3845b34c20"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_slow_fall.png": [
+      "b220649eef3f7e2b247aa4f6b2fa891ff712b752af525e6abaa3ed47064a7b14"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_speed.png": [
+      "20ef86e7e4894bb069e751a6c156fad85ded32f735908066f882b83fdbbb79ef"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_strengthen.png": [
+      "7d59626023fc79bd96165e8253134696ef73eb03690037641b69a74c31f3475f"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_summon.png": [
+      "bccf2e82c275ce27c4a2f326e197a8d358ed14ddb89dfc921299a5db474c856f"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_swap.png": [
+      "ccc95a1066c902bdf72ec8fba903eed991e4dc3e38074944f666b5ef95e05139"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_teleport.png": [
+      "63f4494378d01366a279a6c02136490a8df3d205924125ef7c7f4baf854be0d2"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_water_breathing.png": [
+      "27919c021770fc4f563a16778db007d0e0abc2c0281e3fd4eb0a81e181d46b82"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_weaken.png": [
+      "6cc047e5ed3833d4ad4440057a7544793f76bf99d8ced12e763b4b2b5fe551d8"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_wither.png": [
+      "858d1fa57c3bb94c1c89ab2261358562899c0e6f207e122fadb73c8161d4687c"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_effect_yeet.png": [
+      "dfba7176d0937ff4574e7683f6c903f919e196e5434ba6b69b1cc3a0b18d0289"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_accelerate.png": [
+      "b05d06c7fd66f273139e556b29c1c562b010f773efefd996c79b6c3d01a3473a"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_bounce.png": [
+      "b4a091306c35fdeca96876bdc690eb0edbfe857ab5ee02e69885efbbdf92c505"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_chain.png": [
+      "429b73e80724decefef1a3b99c9ca85a889c2a7fe478ef6e86fbfdfed7ad7ddb"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_delay.png": [
+      "5f7c37c1fdb2d0150531ddeb3672c7a51e3e8b510f3ef1644efbb64e702f9c23"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_double.png": [
+      "392955b070c79930d199fb7c4374a072c4fc4d64e806f38ed80784775d92b43e"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_duration.png": [
+      "d83ccde21187e9896fe89e1126923b71cd536c6303c1d98e1491763c7b917507"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_echo.png": [
+      "be6a10c08bdfa0583fce00453b94c47759e5c30f7c8e38fd816089ccec36fef9"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_fill.png": [
+      "e7586c810c9df98aa938bf8a397c3ac000f80f51b0fc609268b7e12d44ff15e2"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_floor.png": [
+      "1f78bb76daae927a77317b0a08edf0c71f9f20249cd9019a7948266bd2340533"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_fortunate_son.png": [
+      "377f7f678bdc2eee8d25b6bc003ab1f5c5b70710a4f5b0dd3b28ab1124ca1f45"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_gentleness.png": [
+      "289b189487c616bd043410951c38fb000bd0d6a5eb9e33cd9cd9dcf27f752425"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_increased_area.png": [
+      "fb0b81f96af770f4c86f1f3033ed46041eca220d8f5f1624c30cb812b0539cb9"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_increased_power.png": [
+      "a203d2d244e430b0565195db2ce376a04817a20a155635abb827ec21940f6541"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_leech.png": [
+      "01057ee5754b643a3df5d69900f69187ba68f822f964009d84468f98beed726b"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_linger.png": [
+      "bce72d7a10984fb570e3d37dda519fbe0f339cc24f433f42ef2bc83148545b19"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_nullify.png": [
+      "240eda283bb5785e424c0046559ba1a68fe9b4bc5be6e1c37fca5cfb358c3c7f"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_pierce.png": [
+      "12cf1418fcf788d61874d66576665e5321644d13e2ad72377e33323ece051fe2"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_prolonged.png": [
+      "f2e107fbcba405b55927c9034de22c51dea8d754f991a2f410b35d0c7cfee147"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_return.png": [
+      "9e35f3f5803dd21982bb206cd7787225a84b3dc89b2ff0cada65ddc0709aaa60"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_split.png": [
+      "0725da89b4fa82b5d11ec5e606c70186b281e19b67820c2d7887041ad57b3ee1"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_sunder.png": [
+      "a16d2094e4ea6924fae90377287b305414a3dfdc648788d2c69e57b5d9a9896f"
+    ],
+    "kubejs/assets/kubejs/textures/item/arcane_syntax/syntax_modifier_wall.png": [
+      "0e9b61015692b4620e4c4ec7f7284dee8b4c5b08de125a747de7cc3c598d0956"
+    ],
+    "kubejs/data/buildaspell/enchantment/mana_pool.json": [
+      "2ff31311bfb066e05b6ae09df05505cb9997087d4939d7c4227a7e9d59884bde"
+    ],
+    "kubejs/data/buildaspell/enchantment/mana_regeneration.json": [
+      "5076a67113373b0f96a061ded1b593260eba3a100536a9ec9a45ee053e5952a1"
+    ],
+    "kubejs/data/kubejs/tags/item/retired_mana_enchantable.json": [
+      "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+    ],
+    "kubejs/data/minecraft/tags/item/enchantable/weapon.json": [
+      "1118bb7f7ad6bf82375bcac30210a3db1e576f7a6578fe9fc10afd3486a9506e"
+    ],
+    "kubejs/data/thaumaturge/thaumaturge/research_entry/focus_advanced.json": [
+      "c2abe9910f88e39c25f3ee9306af1ed84990bc1d519d86ea9bdef9a9e6a1ed84"
+    ],
+    "kubejs/data/thaumaturge/thaumaturge/research_entry/focus_greater.json": [
+      "a7234825c0d9da3da57d21b912e954172742a9baaf8a6e93414db5e6b0090124"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/hall/arena.nbt": [
+      "39eee9fcf0693139dcebd00eaa78e17d5b49e2d4beac497f3eb64b6c29972ac9"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/hall/nave.nbt": [
+      "8dc246ea3595650284d78e612a70a878dd61c7a9ce5f6e676ce7b0c520a77ca8"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/hall/ring.nbt": [
+      "48e1eb2dc9138dd87e9534a3cf2e8838c021c151e01a6039388cc1455f4f70d7"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/bend/glyphs.nbt": [
+      "adeef65b9ae146922579708e37c66d22ea6437b79178bc70aedbc0873ef1e10f"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/bend/pillar.nbt": [
+      "ce2e784122428c78bbf5be24abb993e5b3e2a414a1715810e3912a1eda6a728b"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/bend/rounded.nbt": [
+      "b0152518640a971640605797f593b71fae6f67d99ed02ccdf3623156a934668f"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/bend/shrine.nbt": [
+      "71fc7bcc6a16eefb2e68da8168bb1aa50bc9cdebee6b6cbb27aef8259ce3ad62"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/corridor/bend.nbt": [
+      "8306d503ed96a85eacfd027e7242832c5a9cc5b6a12d94e6da1e88179af0b79b"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/corridor/cross.nbt": [
+      "0d70e768a45c38bae41fa0329c15f34319efa2ab3ee7475445ef0c4cd87ba3cc"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/corridor/dead_end.nbt": [
+      "a33e514a981996acc6e7377a4ebd0890c50ad6761866390bdf6c64b5918257f3"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/corridor/straight.nbt": [
+      "b914bfc1bc6e9827aecdb8567a0512fd0e50225b6d4609d6a32d645f4dc44ad4"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/corridor/tee.nbt": [
+      "197aab60c85e509cb99b5107eb81b628788be57834063f55f077a22dd9ba256b"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/cross/gallery.nbt": [
+      "69ae4deb54ceff8be299b6e754a53e1e1d9c75c73c5dbfc97e008e2445fdabd0"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/cross/pit.nbt": [
+      "7e8762e20efd47edef74458f6320d095f97d498878a17c0a91f9975267d1ba00"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/cross/rotunda.nbt": [
+      "ddd644fcd912f8846dc9b334063c42307e04c3d713f72387a9cbb1c3b4be2b93"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/dead_end/collapsed.nbt": [
+      "608cc5d128f823906bf7da0a892692610908a774ff24ec9d9b140a4fe83178ed"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/dead_end/shrine.nbt": [
+      "56a3491aa7b5df22e2a467d40485fa138595595faedbbd3d0941f585fae35614"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/dead_end/urns.nbt": [
+      "4702530bb30bf346471777b9eae2dfe2493d8831fd0131b8db02ffd5ce4fa9a2"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/library/archive.nbt": [
+      "59cd298418fdd994e00efd88d8025cdf8df89649b76d575c6eb397bb7c5350d6"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/library/scriptorium.nbt": [
+      "d59b4d1d904362ccdab908662d5895aae289abeafb79dbedc539a764ae0749c8"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/library/study.nbt": [
+      "55e20322d3c98092578e8943e6321f9ac8307fc85e00ba63b727eb640436f151"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/nest/crabs.nbt": [
+      "2ce0eefc31ec15c15f38b6915a4b139c42724f6b95c2e2d575346c1e21dc5167"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/nest/guardians.nbt": [
+      "c4891c82688948ef7c9d13fd5550f864a172036bb20bd22ced18617b7c3e7ecb"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/nest/spiders.nbt": [
+      "f4aad7bd1bb69295f2c29a3110b5c3e48f097fcde267c96fcb97b033767a946e"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/passage/alcoves.nbt": [
+      "ce18dcd9c72c7012d2b97693e88b6499277a3af1eef3e3f9085d862acee4c0a4"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/passage/crypt.nbt": [
+      "45fcc6f84fb7f677fafb0758803ab3362f9626721e6cfdfe202af70ee01da2e0"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/passage/pillared.nbt": [
+      "c07b5864804fde9fab8d309fcdf663acdff6818c13b6a7ef98952b3c56e96e1c"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/passage/ribbed.nbt": [
+      "3bef92c0589f07cc638fab8718178e6539d5e090de9768eaa121715bbde5a96a"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/passage/sunken.nbt": [
+      "2f8a85a32e628c32e9cda0742b307ef4f194687762604eb88a6db557c0465f61"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/passage/vaulted.nbt": [
+      "93bcd7ddf7806c062a6aaae04b1d7edbd1b17eeac6e3b8b8552154db07c65e62"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/crumbling_bend.nbt": [
+      "0f66783dfde0887d6ac04f086c0298749d1e486b4c83ed99ea10ac6b2dfdccfb"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/crumbling_straight.nbt": [
+      "c6490e48e1a37e8dffbbd5b6cb8c9a26e769a6495f8c644103f302fc2a1abe0a"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/trapped_bend.nbt": [
+      "13f8631aeb9bb284b61d9236121aa097580592a1e82beb3977b0d4cc79c40009"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/trapped_straight.nbt": [
+      "a23bf0e529513e2dd770055bdd879ee626e0ef4796617f241a6b7a5a3fc08f1e"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/webbed_bend.nbt": [
+      "88921e8d9a04391e03c2157450c2a484833e95e75428ef14a7a3b16fc3811cba"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/webbed_straight.nbt": [
+      "8670c29528e3c4f3a0bf4a7c114f6273f55249d3e85e07c2438e746f1feeb1a2"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/weeping_bend.nbt": [
+      "8f1ed7c1fb3f07b24b86f2eae3f749b7a0338ab67be8c34fc8f39c021da3cdf9"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/rare/weeping_straight.nbt": [
+      "de432daaed2f514690e21096c3371e4594a67b5ce6b0ce83f227d1a9caf65035"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/tee/hall.nbt": [
+      "9848ec760e9bc25bf567ee0e1acee0d8d206d0eab98811f9db18424c5c1cff00"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/tee/pillared.nbt": [
+      "124553a5d72f088f7b15184b5f2e04862a064f33e271f82fc45213a317038b7d"
+    ],
+    "kubejs/data/thaumaturge/structure/outer_lands/tee/shrine.nbt": [
+      "26cc96e90128bb64c1f289bcff5fffd8f8a3debd7dfa4a058edcac369594a673"
+    ]
+  }
+}

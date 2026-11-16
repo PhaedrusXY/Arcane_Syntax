@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.phaedrusxy.arcanesyntax.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "SpellAnalyzerMixin",
+    "SpellCastingMixin",
+    "LegacyCastingMixin",
+    "LegacyWandMixin",
+    "StockProgressionMixin",
+    "RandomRuneMixin",
+    "ArcaneAltarMixin"
+  ],
+  "client": [
+    "PartPaletteMixin",
+    "LegacyControlsMixin",
+    "LegacyScreenMixin",
+    "ManaHudMixin",
+    "ArcaneAltarScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
