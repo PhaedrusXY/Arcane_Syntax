@@ -1,5 +1,12 @@
 # Testing status
 
+## 1.2 naming/packaging and validation
+
+- Current release numbering aligns with the previously uploaded CurseForge version `1.1.0` by using the simplified **`1.2`** sequence. The canonical download and in-JAR NeoForge metadata should both read **1.2**.
+- Version **1.2** contains the same two corrected Auromancy research positions as the previous 0.2.2 development candidate; no gameplay behavior or progression dependencies were deliberately changed.
+- This is still an experimental, resource/metadata-packaged compatibility build rather than a full NeoForge recompilation. Check the GitHub Actions release workflow and JAR's embedded metadata before distributing.
+- In-game layout, native/Syntax casting, Arcane Altar enchanting, and client/server testing remain pending.
+
 ## 0.2.2 packaging verification (2026-11-16)
 
 - GitHub Actions successfully generated and published `arcane_syntax_unified-0.2.2.jar` with the internal mod version synchronized to 0.2.2.
@@ -34,7 +41,7 @@ These checks do not launch Minecraft, apply runtime Mixins, render the UI, or te
 - [ ] On a character with only Foundation progression, learn Conjure and use it with Wall/Floor in a Lesser Focus.
 - [ ] Verify Lesser Focus rejects a known Structured component and Break + Fill is rejected before payment.
 - [ ] Verify Advanced/Greater Focus and Draconic Artifice research milestones without legacy Build a Spell wands.
-- [ ] Visually verify Advanced Foci at (2, -4) and Greater Foci at (4, -3) in Auromancy with v0.2.2.
+- [ ] Visually verify Advanced Foci at (2, -4) and Greater Foci at (4, -3) in Auromancy with v1.2.
 - [ ] Enchant a Thaumaturge wand with Spell Power I at the Arcane Altar, keep it in main hand, and compare the same Arcane Syntax damage effect against the same target with an unenchanted wand and equal focus tier. Verify Mana Pool / Mana Regeneration options remain hidden.
 - [ ] Retest persistence across save/reopen after a completed inscription.
 - [ ] Verify dedicated-server/client parity.
