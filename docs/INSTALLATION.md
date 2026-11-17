@@ -1,12 +1,14 @@
 # Installation and migration
 
-## Current addon test release: 0.2.2
+## Current release: 1.2
 
-Download [`arcane_syntax_unified-0.2.2.jar`](https://github.com/PhaedrusXY/Arcane_Syntax/releases/download/v0.2.2/arcane_syntax_unified-0.2.2.jar) from the [GitHub 0.2.2 prerelease](https://github.com/PhaedrusXY/Arcane_Syntax/releases/tag/v0.2.2). The **filename and internal mod metadata both report 0.2.2**. This replaces either older 0.2.1 test JAR, including the superseded `0.2.1-auromancy-layout-fix` prerelease.
+Download [`arcane_syntax_unified-1.2.jar`](https://github.com/PhaedrusXY/Arcane_Syntax/releases/download/v1.2/arcane_syntax_unified-1.2.jar) from the [GitHub 1.2 release](https://github.com/PhaedrusXY/Arcane_Syntax/releases/tag/v1.2). The **filename, NeoForge mod version and manifest identify the same release: 1.2**. The previous CurseForge upload was numbered 1.1.0. Historical GitHub 0.2.x test builds, including the 0.2.2 corrected candidate, are superseded.
 
-For a working 0.2.1 installation, close Minecraft and replace **only** the Arcane Syntax JAR in `mods/`; restart the game completely. All recipes, scripts, configs, dependencies, and saved progression remain unchanged in this JAR-only correction. Do not rerun the historical 0.2.1 installer, which contains the older JAR. In multiplayer, install the identical JAR on client and dedicated server.
+**Replacing the addon JAR in an already migrated test instance:** Close Minecraft and replace the older Arcane Syntax JAR in `mods/`; do not retain a second version. For multiplayer, install the identical JAR on both client and server. Do not simply rename the 0.2.2 JAR to 1.2—its embedded mod version would still say 0.2.2.
 
-The JAR is still a compatibility test build, not a full NeoForge rebuild or gameplay-certified release. No new world is required for the visual layout correction. Confirm the Advanced/Greater Focus positions in the Auromancy tab after launch.
+**Migrating from an older Eldritch Aeons pack:** Use the current pack's complete KubeJS scripts and matched Thaumaturge/KubeThaum dependencies. Simply swapping the addon JAR does **not** supply the required recipes, research, or learning scripts. The safest approach for an existing save is a fresh CurseForge 2.0 profile followed by moving a backed-up world into it. For in-place upgrades, back up and replace obsolete KubeJS scripts, and remove the exact old Outer Lands templates listed in [REMOVE_OLD_PORTAL_PATCHES.txt](../deployment/0.2.1/REMOVE_OLD_PORTAL_PATCHES.txt). Keep unrelated datapack files and customized settings.
+
+**Validation:** Version 1.2 retains the corrected research coordinates, Advanced Foci (2, -4) and Greater Foci (4, -3). The distribution is still an experimental compatibility candidate, not a verified new NeoForge compilation. No world reset is required for this visual correction; perform the initial in-game check with backups.
 
 ## Historical 0.2.1 incremental deployment
 
