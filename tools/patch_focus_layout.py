@@ -51,6 +51,9 @@ with ZipFile(BASE) as old, ZipFile(OUT, "w") as patched:
         elif entry.filename == MOD_METADATA:
             assert data.count(b'version="0.2.1"') == 1, "Unexpected baseline version"
             expected = data.replace(b'version="0.2.1"', b'version="1.2"', 1)
+            old_display = b'displayName="Arcane Syntax: Unified Casting (Thaumaturge 1.1 Test)"'
+            assert expected.count(old_display) == 1, "Unexpected baseline display name"
+            expected = expected.replace(old_display, b'displayName="Arcane Syntax"', 1)
             if expected != new_mod_metadata:
                 print("Original JAR metadata vs current source metadata:")
                 print("".join(difflib.unified_diff(
