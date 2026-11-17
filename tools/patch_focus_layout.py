@@ -6,6 +6,7 @@ The two research coordinates are corrected; all spell logic and prerequisites ar
 The historical input JAR remains under deployment/0.2.1 for reproducibility.
 """
 import hashlib
+import difflib
 import json
 import re
 from pathlib import Path
@@ -49,8 +50,14 @@ with ZipFile(BASE) as old, ZipFile(OUT, "w") as patched:
             data = source.read_bytes()
         elif entry.filename == MOD_METADATA:
             assert data.count(b'version="0.2.1"') == 1, "Unexpected baseline version"
-            assert data.replace(b'version="0.2.1"', b'version="1.2"', 1) == new_mod_metadata, (
-                "Mod metadata differences extend beyond version number")
+            expected = data.replace(b'version="0.2.1"', b'version="1.2"', 1)
+            if expected != new_mod_metadata:
+                print("Original JAR metadata vs current source metadata:")
+                print("".join(difflib.unified_diff(
+                    expected.decode("utf-8").splitlines(keepends=True),
+                    new_mod_metadata.decode("utf-8").splitlines(keepends=True),
+                    fromfile="baseline-with-1.2", tofile="source-1.2")))
+                raise AssertionError("Mod metadata differences extend beyond version number")
             data = new_mod_metadata
         elif entry.filename == MANIFEST:
             data, count = re.subn(rb'(?m)^Implementation-Version: [^\r\n]+',
