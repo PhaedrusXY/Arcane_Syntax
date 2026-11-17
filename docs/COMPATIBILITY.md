@@ -1,6 +1,6 @@
 # Compatibility
 
-## Target of the 0.2.1 addon
+## Target of Arcane Syntax 1.2
 
 | Component | Declared constraint / observed test version |
 | --- | --- |
