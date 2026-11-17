@@ -1,5 +1,11 @@
 # Testing status
 
+## 0.2.2 packaging verification (2026-11-16)
+
+- GitHub Actions successfully generated and published `arcane_syntax_unified-0.2.2.jar` with the internal mod version synchronized to 0.2.2.
+- The packaging script compares decompressed ZIP entries against the base 0.2.1 compatibility build. It permits changes only to the two focus research JSON files and version-identifying metadata/log banner. All other game/recipe/Java payloads are byte-identical.
+- In-game verification of the Advanced/Greater Foci research positions, Arcane Altar Spell Power effects, and broader gameplay remains outstanding. The previous 0.2.1 runtime test observations below do not establish 0.2.2 gameplay compatibility.
+
 ## Maintainer reports through 2026-11-15
 
 | Area | Evidence and status |
