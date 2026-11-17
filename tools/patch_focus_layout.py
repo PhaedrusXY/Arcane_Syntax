@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
-"""Package Arcane Syntax 0.2.2 from the validated experimental 0.2.1 base.
+"""Package Arcane Syntax 1.2 from the preserved 0.2.1 compatibility test baseline.
 
-Only research layout data and version-identifying metadata are updated.
-No gameplay code is rebuilt. Verify unchanged entries by decompressed bytes.
+This is a resource and version-metadata update, NOT a dependency-resolved rebuild.
+The two research coordinates are corrected; all spell logic and prerequisites are unchanged.
+The historical input JAR remains under deployment/0.2.1 for reproducibility.
 """
 import hashlib
 import json
 import re
 from pathlib import Path
 from zipfile import ZipFile
+from classfile import read_pool, rewrite_utf
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = ROOT / "deployment/0.2.1/mods/arcane_syntax_unified-0.2.1-thaumaturge-1.1.0-test.jar"
-OUT = ROOT / "dist/0.2.2/arcane_syntax_unified-0.2.2.jar"
+OUT = ROOT / "dist/1.2/arcane_syntax_unified-1.2.jar"
 SOURCE = ROOT / "src/main/resources/data/thaumaturge/thaumaturge/research_entry"
 TARGET = "data/thaumaturge/thaumaturge/research_entry/"
 MOD_METADATA = "META-INF/neoforge.mods.toml"
@@ -24,14 +26,15 @@ RESEARCH = {
 }
 ALLOWED_CHANGES = set(RESEARCH) | {MOD_METADATA, MANIFEST, STARTUP_CLASS}
 
-assert BASE.is_file(), f"Missing 0.2.1 test build: {BASE}"
+assert BASE.is_file(), f"Missing preserved 0.2.1 input JAR: {BASE}"
 OUT.parent.mkdir(parents=True, exist_ok=True)
-assert b'version="0.2.2"' in (ROOT / "src/main/resources/META-INF/neoforge.mods.toml").read_bytes()
+new_mod_metadata = (ROOT / "src/main/resources/META-INF/neoforge.mods.toml").read_bytes()
+assert new_mod_metadata.count(b'version="1.2"') == 1, "Incorrect internal mod version"
 
 with ZipFile(BASE) as old, ZipFile(OUT, "w") as patched:
     names = old.namelist()
-    assert len(names) == len(set(names)), "Duplicate ZIP entry paths in base JAR"
-    assert set(RESEARCH) | {MOD_METADATA, STARTUP_CLASS} <= set(names), "Base JAR missing expected entries"
+    assert len(names) == len(set(names)), "Duplicate input JAR entries"
+    assert set(RESEARCH) | {MOD_METADATA, STARTUP_CLASS, MANIFEST} <= set(names), "Input JAR missing expected entries"
     for entry in old.infolist():
         data = old.read(entry.filename)
         if entry.filename in RESEARCH:
@@ -39,45 +42,56 @@ with ZipFile(BASE) as old, ZipFile(OUT, "w") as patched:
             corrected = json.loads(source.read_text(encoding="utf-8"))
             previous = json.loads(data)
             assert (corrected["column"], corrected["row"]) == (col, row)
-            # The only change to research data is its position in the Thaumonomicon.
             for document in (previous, corrected):
                 document.pop("column", None)
                 document.pop("row", None)
-            assert previous == corrected, f"Unintended recipe/dependency change: {entry.filename}"
+            assert previous == corrected, f"Non-layout research changes: {entry.filename}"
             data = source.read_bytes()
         elif entry.filename == MOD_METADATA:
-            assert data.count(b'version="0.2.1"') == 1, "Unexpected previous mod version"
-            data = data.replace(b'version="0.2.1"', b'version="0.2.2"', 1)
+            assert data.count(b'version="0.2.1"') == 1, "Unexpected baseline version"
+            assert data.replace(b'version="0.2.1"', b'version="1.2"', 1) == new_mod_metadata, (
+                "Mod metadata differences extend beyond version number")
+            data = new_mod_metadata
         elif entry.filename == MANIFEST:
-            # Existing manifests may contain an older offline-build implementation version.
             data, count = re.subn(rb'(?m)^Implementation-Version: [^\r\n]+',
-                                  b'Implementation-Version: 0.2.2', data)
-            assert count <= 1, "Unexpected duplicate Implementation-Version entries"
+                                  b'Implementation-Version: 1.2', data)
+            assert count == 1, "Missing or duplicate manifest implementation version"
         elif entry.filename == STARTUP_CLASS:
-            # Only adjust the log-banner string constant (same byte length); no bytecode change.
-            data = re.sub(rb'Arcane Syntax 0\.2\.[01]', b'Arcane Syntax 0.2.2', data)
+            # Alter only the UTF8 version banner in the constant pool. The bytecode is untouched.
+            pool, before_end = read_pool(data)
+            old_banners = [
+                val.decode("utf-8")
+                for el in pool[1:] if el is not None
+                for tag, val in [el]
+                if tag == 1 and b"Arcane Syntax" in val and b"native focus bridge" in val
+            ]
+            assert len(old_banners) <= 1, f"Unexpected startup banners: {old_banners}"
+            if old_banners:
+                newer = ("Arcane Syntax 1.2 compatibility test: native focus bridge "
+                         "for Thaumaturge 1.1.0 / Build a Spell 1.0.3")
+                data, counts = rewrite_utf(data, {old_banners[0]: newer})
+                assert counts.get(old_banners[0]) == 1
+                assert old.read(entry.filename)[before_end:] == data[read_pool(data)[1]:], (
+                    "Compiled instructions changed while patching the banner")
+            else:
+                print("Note: no startup version banner in classfile; no class patch needed.")
         patched.writestr(entry, data)
 
 with ZipFile(BASE) as old, ZipFile(OUT) as patched:
-    assert old.namelist() == patched.namelist(), "Entry set or order changed"
+    assert old.namelist() == patched.namelist(), "Unexpected added/removed entries"
+    assert patched.testzip() is None
     changed = [name for name in old.namelist() if old.read(name) != patched.read(name)]
     assert set(changed) <= ALLOWED_CHANGES, f"Unexpected changes: {changed}"
-    assert set(RESEARCH).issubset(changed), "Expected both research entries to change"
-    assert MOD_METADATA in changed, "Expected internal version metadata to change"
-    assert b'version="0.2.2"' in patched.read(MOD_METADATA)
-    assert b'version="0.2.1"' not in patched.read(MOD_METADATA)
-    if MANIFEST in patched.namelist():
-        manifest = patched.read(MANIFEST)
-        if b'Implementation-Version:' in manifest:
-            assert b'Implementation-Version: 0.2.2' in manifest
+    assert set(RESEARCH) | {MOD_METADATA, MANIFEST} <= set(changed), "Required changes missing"
+    assert patched.read(MOD_METADATA) == new_mod_metadata
+    assert b'Implementation-Version: 1.2' in patched.read(MANIFEST)
     for name in RESEARCH:
-        payload = json.loads(patched.read(name))
-        assert (payload["column"], payload["row"]) == RESEARCH[name][1]
+        resource = json.loads(patched.read(name))
+        assert (resource["column"], resource["row"]) == RESEARCH[name][1]
     for name in old.namelist():
         if name.endswith(".class") and name != STARTUP_CLASS:
-            assert old.read(name) == patched.read(name), f"Class changed: {name}"
+            assert old.read(name) == patched.read(name), f"Gameplay class modified: {name}"
     print("Modified entries:", changed)
-    print("Only two research coordinates and version-identifying metadata changed.")
-    print("Spell logic, recipes, dependencies and other compiled classes unchanged.")
+    print("Research prerequisites, crafting recipes, spell logic and other classes are identical.")
 print("JAR:", OUT)
 print("SHA256:", hashlib.sha256(OUT.read_bytes()).hexdigest())
