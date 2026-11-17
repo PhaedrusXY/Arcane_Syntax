@@ -1,6 +1,14 @@
 # Changelog
 
-## 0.2.2 — Auromancy research layout correction
+## 1.2 — CurseForge-aligned release numbering and corrected research layout
+
+- Release as **`arcane_syntax_unified-1.2.jar`** to match the user's simplified two-part naming convention and follow the previously uploaded CurseForge version **1.1.0**. The embedded NeoForge mod version, Gradle source, and JAR manifest also identify this build as **1.2**.
+- Carry forward the corrected Thaumonomicon research coordinates: **Advanced Foci (2, -4)** and **Greater Foci (4, -3)**. Crafting recipes, research prerequisites, component knowledge, progression, and spell logic remain unchanged.
+- The artifact is a repackaging of the prior **0.2.2 GitHub development candidate**, itself derived from the preserved **0.2.1** compatibility test JAR. It is not a new dependency-resolved NeoForge build, and requires the pack's KubeJS scripts for its intended progression.
+- Going forward, use `arcane_syntax_unified-X.Y.jar` for downloaded artifacts and `vX.Y` for GitHub tags, with each update explained here rather than in the filename. The old 0.2.x files and tags are archival history, not the current version.
+- Live gameplay and dedicated-server validation remain open; this release should not be interpreted as adding new features beyond the previously documented integration.
+
+## 0.2.2 — Archived GitHub development candidate (Auromancy layout correction)
 
 - Correct Advanced Foci to column **2**, row **-4**, and Greater Foci to column **4**, row **-3** in the Thaumonomicon. No changes to crafting recipes, research prerequisites, progression gates, or spell behavior.
 - Standardize the distributable as **`arcane_syntax_unified-0.2.2.jar`**, and synchronize the version in the mod metadata, Gradle source, and package manifest. The mod ID remains `arcane_syntax_unified`.
