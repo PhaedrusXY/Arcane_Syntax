@@ -3,7 +3,7 @@
 ## Unreleased — Auromancy research layout correction
 
 - Restore Thaumaturge 1.1.0's original Advanced Foci and Greater Foci research-tree positions while preserving Arcane Syntax's additional research prerequisites.
-- The published 0.2.1 test JAR still contains the older positions; until a rebuilt JAR is released, use the separate `kubejs/data` layout hotfix when testing.
+- The original 0.2.1 test JAR contains the older positions. A corrected 0.2.1 candidate JAR has been prepared with the research entries fixed inside the mod, with no KubeJS datapack override required. The internal mod ID and version are unchanged, and all compiled Java classes remain identical to the previous candidate. This corrected JAR still requires in-game verification and a separate CurseForge file upload.
 
 ## Repository initialization — 2026-11-15 testing update
 
