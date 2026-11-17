@@ -1,6 +1,14 @@
 name: Package Arcane Syntax 1.2
 
 on:
+  push:
+    paths:
+      - '.github/workflows/build-layout-fix.yml'
+      - 'tools/patch_focus_layout.py'
+      - 'tools/classfile.py'
+      - 'src/main/resources/META-INF/neoforge.mods.toml'
+      - 'src/main/resources/data/thaumaturge/thaumaturge/research_entry/focus_advanced.json'
+      - 'src/main/resources/data/thaumaturge/thaumaturge/research_entry/focus_greater.json'
   workflow_dispatch:
 
 permissions:
