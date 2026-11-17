@@ -1,4 +1,6 @@
-# 0.2.1 integration boundaries
+# Arcane Syntax 1.2 integration boundaries
+
+The underlying spell integration logic was introduced in the 0.2.x development candidates; version 1.2 preserves that behavior with the corrected research layout and simplified public version numbering.
 
 The addon owns focus composition validation, native casting interception, Vis
 payment/refunds, focus power bonuses and retirement of the personal-mana route.
