@@ -1,9 +1,12 @@
 # Changelog
 
-## Unreleased — Auromancy research layout correction
+## 0.2.2 — Auromancy research layout correction
 
-- Correct the two swapped Thaumonomicon positions: **Advanced Foci** to column **2**, row **-4**, and **Greater Foci** to column **4**, row **-3**. Recipes, research dependencies, and tier progression remain unchanged.
-- The original 0.2.1 test JAR contains the older positions. A corrected 0.2.1 candidate JAR has been prepared with the research entries fixed inside the mod, with no KubeJS datapack override required. The internal mod ID and version are unchanged, and all compiled Java classes remain identical to the previous candidate. This corrected JAR still requires in-game verification and a separate CurseForge file upload.
+- Correct Advanced Foci to column **2**, row **-4**, and Greater Foci to column **4**, row **-3** in the Thaumonomicon. No changes to crafting recipes, research prerequisites, progression gates, or spell behavior.
+- Standardize the distributable as **`arcane_syntax_unified-0.2.2.jar`**, and synchronize the version in the mod metadata, Gradle source, and package manifest. The mod ID remains `arcane_syntax_unified`.
+- Repackage the original 0.2.1 offline compatibility test JAR; no dependency-resolved rebuild or gameplay-code change. All other JAR payload contents remain unchanged except version identifiers and the two research JSON entries. The old 0.2.1 layout-fix prerelease is superseded.
+- Preserve the Arcane Altar's Spell Power enchanting for Thaumaturge wands; Mana Pool and Mana Regeneration enchantments remain disabled. This behavior predates 0.2.2 and is documented here for clarity, not introduced by this correction.
+- The 0.2.2 candidate remains experimental and needs an in-game layout/enchanting check before any separate CurseForge release.
 
 ## Repository initialization — 2026-11-15 testing update
 
