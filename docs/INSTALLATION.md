@@ -1,5 +1,15 @@
 # Installation and migration
 
+## Current addon test release: 0.2.2
+
+Download [`arcane_syntax_unified-0.2.2.jar`](https://github.com/PhaedrusXY/Arcane_Syntax/releases/download/v0.2.2/arcane_syntax_unified-0.2.2.jar) from the [GitHub 0.2.2 prerelease](https://github.com/PhaedrusXY/Arcane_Syntax/releases/tag/v0.2.2). The **filename and internal mod metadata both report 0.2.2**. This replaces either older 0.2.1 test JAR, including the superseded `0.2.1-auromancy-layout-fix` prerelease.
+
+For a working 0.2.1 installation, close Minecraft and replace **only** the Arcane Syntax JAR in `mods/`; restart the game completely. All recipes, scripts, configs, dependencies, and saved progression remain unchanged in this JAR-only correction. Do not rerun the historical 0.2.1 installer, which contains the older JAR. In multiplayer, install the identical JAR on client and dedicated server.
+
+The JAR is still a compatibility test build, not a full NeoForge rebuild or gameplay-certified release. No new world is required for the visual layout correction. Confirm the Advanced/Greater Focus positions in the Auromancy tab after launch.
+
+## Historical 0.2.1 incremental deployment
+
 ## Use the right package
 
 `deployment/0.2.1/` and the original ZIP under `dist/0.2.1/` are the **incremental update from the existing 0.2.0 Eldritch Aeons focus migration**. They intentionally do not contain every script or overwrite configuration. `pack/` is a fuller reference snapshot, not a one-click fresh modpack installer.
