@@ -34,6 +34,8 @@ These checks do not launch Minecraft, apply runtime Mixins, render the UI, or te
 - [ ] On a character with only Foundation progression, learn Conjure and use it with Wall/Floor in a Lesser Focus.
 - [ ] Verify Lesser Focus rejects a known Structured component and Break + Fill is rejected before payment.
 - [ ] Verify Advanced/Greater Focus and Draconic Artifice research milestones without legacy Build a Spell wands.
+- [ ] Visually verify Advanced Foci at (2, -4) and Greater Foci at (4, -3) in Auromancy with v0.2.2.
+- [ ] Enchant a Thaumaturge wand with Spell Power I at the Arcane Altar, keep it in main hand, and compare the same Arcane Syntax damage effect against the same target with an unenchanted wand and equal focus tier. Verify Mana Pool / Mana Regeneration options remain hidden.
 - [ ] Retest persistence across save/reopen after a completed inscription.
 - [ ] Verify dedicated-server/client parity.
 - [ ] Test a newly generated Outer Lands labyrinth after removing only the old template patches.
