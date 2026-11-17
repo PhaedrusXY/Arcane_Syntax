@@ -1,10 +1,11 @@
-name: Build corrected 0.2.1 Auromancy research layout JAR
+name: Package Arcane Syntax 0.2.2
 
 on:
   push:
     paths:
       - '.github/workflows/build-layout-fix.yml'
       - 'tools/patch_focus_layout.py'
+      - 'src/main/resources/META-INF/neoforge.mods.toml'
       - 'src/main/resources/data/thaumaturge/thaumaturge/research_entry/focus_advanced.json'
       - 'src/main/resources/data/thaumaturge/thaumaturge/research_entry/focus_greater.json'
   workflow_dispatch:
@@ -17,24 +18,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Patch two JSON resources into existing test JAR
+      - name: Repackage 0.2.1 test baseline as versioned 0.2.2
         run: python3 tools/patch_focus_layout.py
-      - name: Upload downloadable build artifact
+      - name: Upload 0.2.2 build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: arcane-syntax-0.2.1-auromancy-layout-fix
-          path: dist/0.2.1/arcane_syntax_unified-0.2.1-auromancy-layout-fix.jar
+          name: arcane_syntax_unified-0.2.2
+          path: dist/0.2.2/arcane_syntax_unified-0.2.2.jar
           if-no-files-found: error
-      - name: Publish test JAR as GitHub prerelease
+      - name: Publish 0.2.2 test prerelease
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          tag="v0.2.1-auromancy-layout-fix-test"
-          jar="dist/0.2.1/arcane_syntax_unified-0.2.1-auromancy-layout-fix.jar"
+          tag="v0.2.2"
+          jar="dist/0.2.2/arcane_syntax_unified-0.2.2.jar"
           if gh release view "$tag" >/dev/null 2>&1; then
             gh release upload "$tag" "$jar" --clobber
           else
             gh release create "$tag" "$jar" --target "$GITHUB_SHA" --prerelease \
-              --title "Arcane Syntax 0.2.1 — Auromancy layout correction (test)" \
-              --notes "Resource-only correction: Advanced Foci at column 2, row -4; Greater Foci at column 4, row -3. All other JAR payload bytes, including compiled classes, recipes and research dependencies, are unchanged. Experimental Thaumaturge 1.1.0 build; in-game verification pending. Use only one Arcane Syntax JAR."
+              --title "Arcane Syntax 0.2.2 — Auromancy research layout correction" \
+              --notes "0.2.2 fixes the two swapped Thaumonomicon research positions: Advanced Foci (2,-4) and Greater Foci (4,-3). This version also standardizes the JAR filename and internal mod metadata as 0.2.2. No gameplay logic, research dependencies, or recipes change. This is an experimental Thaumaturge 1.1.0 test build; in-game verification remains necessary. Install one Arcane Syntax JAR only."
           fi
