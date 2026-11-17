@@ -4,7 +4,7 @@
 
 **Arcane Syntax** integrates learned Build a Spell components with Thaumaturge's native focus, wand, research, and Vis systems. It is developed alongside [Eldritch Aeons](https://github.com/PhaedrusXY/Eldritch_Aeons), while retaining its own source and release identity.
 
-**Current development version: 0.2.1 — experimental Thaumaturge 1.1.0 compatibility candidate.** Initial in-game testing is underway. This is source and development documentation, not an announcement of a new public Eldritch Aeons release.
+**Current development version: 0.2.2 — experimental Thaumaturge 1.1.0 compatibility candidate.** Initial in-game testing is underway. This is source and development documentation, not an announcement of a new public Eldritch Aeons release.
 
 The public project name is **Arcane Syntax**. Its existing internal mod ID remains `arcane_syntax_unified` to preserve saved data, resource locations, configuration compatibility, and mod dependencies.
 
@@ -18,9 +18,19 @@ The public project name is **Arcane Syntax**. Its existing internal mod ID remai
 - Keep Thaumaturge's native spells available. **Native and Syntax components cannot currently be combined in one spell.** Syntax compositions are Instant and linear; native branch, charged, and channeled behavior is not supported for Syntax.
 - Reject **Break + Fill** before inscription/payment. Break with Increased Area remains available within normal costs and tier limits.
 
-**Auromancy research layout fix (0.2.1 corrected candidate):** Advanced Foci belongs at column 2, row -4; Greater Foci belongs at column 4, row -3. Only their Thaumonomicon display positions are corrected; their recipes, prerequisites, and progression gates remain unchanged. The older 0.2.1 test JAR does not include this correction. Install the corrected `arcane_syntax_unified-0.2.1-auromancy-layout-fix.jar` as the sole Arcane Syntax JAR on both client and server. This fix is contained in the addon itself, not a KubeJS override, and still requires an in-game visual check.
+**0.2.2 Auromancy research layout fix:** Advanced Foci is at column 2, row -4; Greater Foci is at column 4, row -3. This corrects their Thaumonomicon positions only. Recipes, prerequisites, tier gates and spell execution are unchanged. The fix is inside the addon, without a KubeJS override, and still requires an in-game visual check.
 
 **Conjure is Foundation in 0.2.1**, alongside Wall and Floor. Fill and Increased Area remain Structured. The optional *Two Grammars* entry explains the separate spell grammars; the journal's voice grows from cautious experimentation toward dangerous confidence.
+
+## Versioning and downloads
+
+**Current test release:** [Arcane Syntax v0.2.2](https://github.com/PhaedrusXY/Arcane_Syntax/releases/tag/v0.2.2) — download `arcane_syntax_unified-0.2.2.jar`.
+
+From 0.2.2 onward, use the format **`arcane_syntax_unified-X.Y.Z.jar`** for JAR releases. The filename and internal mod version must agree. Do not append descriptions such as `-fix`, `-test`, or `-compatibility` to JAR filenames. Describe each release's changes in its GitHub release notes and [CHANGELOG.md](CHANGELOG.md), and increment the version for every newly distributed correction. Older test packages retain their historical names and paths for traceability but are superseded by 0.2.2.
+
+## Arcane Altar's retained purpose
+
+The Eldritch Aeons pack adds a **Thaumaturge infusion recipe** for Build a Spell's Arcane Altar in `pack/kubejs/server_scripts/eldritch_aeons_arcane_syntax_recipes.js`, unlocked with Infused Syntax research. Under the default `disableLegacyCasting=true` setting, the addon hides/disables **Mana Pool** and **Mana Regeneration** enchanting, and permits **Spell Power** enchanting of Thaumaturge wands. Build a Spell continues to execute Syntax spells through its own API after Arcane Syntax pays Vis. Spell Power is read from the held main-hand item in Build a Spell; it is intended to boost its spell damage/effectiveness, including Syntax casts. Confirm the applied enchantment and measured effect in game; the altar is not a new Thaumaturge focus crafting station and this addon does not promise native Thaumaturge spell scaling.
 
 ## Target environment
 
@@ -50,7 +60,7 @@ See [testing status](docs/TESTING_STATUS.md), [architecture](docs/ARCHITECTURE.m
 
 ## Source and builds
 
-The source snapshot is Arcane Syntax 0.2.1. Build instructions and dependency filenames are retained with the project. Third-party dependency JARs, game saves, account files, and raw player logs are not part of this repository.
+The current source metadata is Arcane Syntax 0.2.2. The 0.2.2 test JAR is an offline resource/metadata repackage of the 0.2.1 compatibility candidate; no full NeoForge recompilation was performed. Build instructions and dependency filenames are retained with the project. Third-party dependency JARs, game saves, account files, and raw player logs are not part of this repository.
 
 The existing distributed test JAR was an **offline compatibility port**, not a complete dependency-resolved NeoForge rebuild. Historical reports record 4,656 dependency-free core assertions and 971 pack-script assertions against API-shaped mocks. These are not proof of full game compatibility. Initial user testing subsequently confirmed loading and research visibility; comprehensive casting, progression, multiplayer, and input regression testing remain open.
 
