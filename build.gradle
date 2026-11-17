@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.phaedrusxy'
-version = '0.2.2'
+version = '1.2'
 base { archivesName = 'arcane_syntax_unified' }
 java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
