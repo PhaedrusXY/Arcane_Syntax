@@ -18,6 +18,8 @@ The public project name is **Arcane Syntax**. Its existing internal mod ID remai
 - Keep Thaumaturge's native spells available. **Native and Syntax components cannot currently be combined in one spell.** Syntax compositions are Instant and linear; native branch, charged, and channeled behavior is not supported for Syntax.
 - Reject **Break + Fill** before inscription/payment. Break with Increased Area remains available within normal costs and tier limits.
 
+**Auromancy research layout fix (0.2.1 corrected candidate):** Advanced Foci belongs at column 2, row -4; Greater Foci belongs at column 4, row -3. Only their Thaumonomicon display positions are corrected; their recipes, prerequisites, and progression gates remain unchanged. The older 0.2.1 test JAR does not include this correction. Install the corrected `arcane_syntax_unified-0.2.1-auromancy-layout-fix.jar` as the sole Arcane Syntax JAR on both client and server. This fix is contained in the addon itself, not a KubeJS override, and still requires an in-game visual check.
+
 **Conjure is Foundation in 0.2.1**, alongside Wall and Floor. Fill and Increased Area remain Structured. The optional *Two Grammars* entry explains the separate spell grammars; the journal's voice grows from cautious experimentation toward dangerous confidence.
 
 ## Target environment
