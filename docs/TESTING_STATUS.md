@@ -1,16 +1,21 @@
 # Testing status
 
-## Unreleased component compatibility validation (2026-11-17)
+## 1.3 candidate packaging and compatibility validation (2026-11-18)
 
-The current source adds shared modifier applicability validation and contextual
-Focal Manipulator filtering. The published **1.2 JAR predates these changes**;
-this work has not replaced that release or produced a new published build.
+The candidate **arcane_syntax_unified-1.3.jar** contains shared modifier
+applicability validation and contextual Focal Manipulator filtering. It is a full
+source build supplied for live testing. The published **1.2 JAR predates these
+changes**; this work has not replaced that release or published a public 1.3
+release. No JavaScript file replacement is needed for this update.
+
+- Artifact size: **136,873 bytes**.
+- SHA-256: `75d0afede478e2204177271c2963e51777b2faf89e11e87d3d4a1f4f1dc9a976`.
 
 ### Completed checks
 
 - Full `compileJava` against the original Build a Spell **1.0.3** and Thaumaturge
   **1.1.0** JARs, Minecraft **26.1.2**, and NeoForge **26.1.2.122**: passed.
-- Gradle **9.2.1** `check` using JDK **25.0.5+8**, with the original Build A Spell
+- Gradle **9.2.1** `build` using JDK **25.0.5+8**, with the original Build A Spell
   Fix **1.1.2** JAR supplied through `-PshieldFixJar`: passed.
 - Compatibility suite: **21,884 assertions passed**. This includes all **7,238**
   delivery/effect/modifier triples through the native-node compiler and the real
@@ -18,13 +23,20 @@ this work has not replaced that release or produced a new published build.
 - Original Fix handler: checked across all **7,238** triples, with exactly **14**
   cancellations for Fill + Break or Fill + Evaporate Water. This calls the real
   handler and Mixin callback class; it does not bootstrap or prove game injection.
-- Core compiler/currency/receipt/tier/composition suite: **4,659 assertions passed**,
-  both standalone and under Gradle.
+- Core compiler/currency/receipt/tier/composition suite: **4,659 assertions passed**
+  under Gradle. The prior source audit also passed the standalone suite.
 - Pack-script suite: **971 assertions passed** using the real scripts with
   API-shaped mocks.
 - Released Thaumaturge 1.1.0 bytecode inspection confirmed the new client Mixin
   field/method targets and the native placement operations used by the preview.
   Its inscription path checks spell validity before removing XP or crystals.
+- Compared all **12 existing Mixins** against the offline-ported baseline and the
+  exact supported dependencies: **19 injected method targets** and **8 shadow
+  fields** retained their expected names and descriptors.
+- Verified the finished archive's CRCs, matching **1.3** filename/metadata/manifest/
+  startup banner, all **164 source resource files**, **32 addon class files**, MIT
+  license, and client-only registration of the new screen Mixin. No dependency
+  JARs or test classes are bundled. The existing research-layout fixes are present.
 
 See the [complete compatibility audit](COMPONENT_COMPATIBILITY.md) for source
 links, exact dependency hashes, all 47 effect rows, and the test commands. These
