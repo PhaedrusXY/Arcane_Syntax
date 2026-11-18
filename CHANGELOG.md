@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — complete modifier compatibility validation
+
+- Use Build a Spell 1.0.3's loaded `ModifierApplicability` rules for every modifier, rather than maintaining a Shield-specific exclusion or a copied compatibility table. Effect modifiers follow their owning effect; delivery modifiers use delivery rules.
+- Reject incompatible compositions in the shared analysis/inscription/casting path before charging resources. Previously inscribed invalid foci retain their data and report why they need editing.
+- Filter Arcane Syntax palette choices for the actual selected insertion point, including downstream modifier rebinding when inserting an effect. Refresh the palette after selection and draft changes and recheck stale placement attempts.
+- Preserve Build A Spell Fix 1.1.2's live Fill exclusions, existing pack restrictions, focus power, Shield absorption, spell costs, and component IDs.
+- Add a version-pinned semantic test suite covering all 7,238 delivery/effect/modifier triples and a complete component compatibility reference. Live client/server Mixin and gameplay checks remain a separate release gate.
+- This is a source change for the next release. The 1.2 release artifact and its packaging workflow have not been updated.
+
 ## 1.2 — CurseForge-aligned release numbering and corrected research layout
 
 - Release as **`arcane_syntax_unified-1.2.jar`** to match the user's simplified two-part naming convention and follow the previously uploaded CurseForge version **1.1.0**. The embedded NeoForge mod version, Gradle source, and JAR manifest also identify this build as **1.2**.

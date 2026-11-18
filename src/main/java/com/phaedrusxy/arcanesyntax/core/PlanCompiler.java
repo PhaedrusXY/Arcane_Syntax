@@ -16,6 +16,15 @@ public final class PlanCompiler {
     private PlanCompiler() {}
 
     public static SpellPlan compile(Node root, int maxComponents) {
+        return compile(root, maxComponents, true);
+    }
+
+    /** Editor placement preview: a delivery may be chosen before its first effect. */
+    public static SpellPlan compilePartial(Node root, int maxComponents) {
+        return compile(root, maxComponents, false);
+    }
+
+    private static SpellPlan compile(Node root, int maxComponents, boolean requireEffect) {
         if (root == null || !ORIGIN.equals(root.partId())) fail("The spell must start at the native origin.");
         if (maxComponents < 1 || maxComponents > 4096) fail("Invalid component limit.");
         if (root.stacks() != 1) fail("The origin cannot be repeated.");
@@ -50,7 +59,7 @@ public final class PlanCompiler {
             if (node.children().size() != 1) fail("Arcane Syntax branches are not supported; use BaS modifiers instead.");
             node = node.children().get(0);
         }
-        if (!seenEffect) fail("Add at least one effect.");
+        if (requireEffect && !seenEffect) fail("Add at least one effect.");
         return new SpellPlan(delivery, out);
     }
     private static void fail(String message) { throw new InvalidSpell(message); }

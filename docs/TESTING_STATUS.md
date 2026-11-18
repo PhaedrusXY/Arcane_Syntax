@@ -1,5 +1,56 @@
 # Testing status
 
+## Unreleased component compatibility validation (2026-11-17)
+
+The current source adds shared modifier applicability validation and contextual
+Focal Manipulator filtering. The published **1.2 JAR predates these changes**;
+this work has not replaced that release or produced a new published build.
+
+### Completed checks
+
+- Full `compileJava` against the original Build a Spell **1.0.3** and Thaumaturge
+  **1.1.0** JARs, Minecraft **26.1.2**, and NeoForge **26.1.2.122**: passed.
+- Gradle **9.2.1** `check` using JDK **25.0.5+8**, with the original Build A Spell
+  Fix **1.1.2** JAR supplied through `-PshieldFixJar`: passed.
+- Compatibility suite: **21,884 assertions passed**. This includes all **7,238**
+  delivery/effect/modifier triples through the native-node compiler and the real
+  upstream rule class: **2,821 allowed / 4,417 rejected** before Mixin application.
+- Original Fix handler: checked across all **7,238** triples, with exactly **14**
+  cancellations for Fill + Break or Fill + Evaporate Water. This calls the real
+  handler and Mixin callback class; it does not bootstrap or prove game injection.
+- Core compiler/currency/receipt/tier/composition suite: **4,659 assertions passed**,
+  both standalone and under Gradle.
+- Pack-script suite: **971 assertions passed** using the real scripts with
+  API-shaped mocks.
+- Released Thaumaturge 1.1.0 bytecode inspection confirmed the new client Mixin
+  field/method targets and the native placement operations used by the preview.
+  Its inscription path checks spell validity before removing XP or crystals.
+
+See the [complete compatibility audit](COMPONENT_COMPATIBILITY.md) for source
+links, exact dependency hashes, all 47 effect rows, and the test commands. These
+checks establish compilation and rule delegation; they do not cast every spell
+or establish live gameplay compatibility.
+
+### Remaining release checks in a copied game instance
+
+- [ ] Launch a client and dedicated server with the supported dependencies and
+  confirm all Mixins apply; keep the new screen Mixin client-only.
+- [ ] Under Self + Shield, verify Increased Area remains available while Increased
+  Power and Prolonged are unavailable. Change selection and edit/delete nodes to
+  verify the palette refreshes and invalid saved foci remain repairable.
+- [ ] Build Shield + Increased Area + Damage + Increased Power. Verify inserting
+  Shield immediately before an existing Increased Power is blocked because that
+  insertion would rebind the modifier.
+- [ ] Verify projectile modifiers are available under Cast/Tracking and unavailable
+  under Self. Verify delivery modifiers such as Delay still work with Shield.
+- [ ] With the Fix installed, verify Fill + Break and Fill + Evaporate Water are
+  unavailable while Conjure + Fill remains available.
+- [ ] Attempt to inscribe an incompatible saved composition: verify a useful error
+  and no XP/crystal consumption. Attempt to cast a previously inscribed invalid
+  focus: verify an error and no Vis consumption, with its components preserved.
+- [ ] Inscribe and cast valid Syntax and native Thaumaturge spells, verify normal
+  costs, then save/reopen and repeat on a dedicated server.
+
 ## 1.2 naming/packaging and validation
 
 - Current release numbering aligns with the previously uploaded CurseForge version `1.1.0` by using the simplified **`1.2`** sequence. The canonical download and in-JAR NeoForge metadata should both read **1.2**.
@@ -53,4 +104,7 @@ Use the existing backed-up sandbox for loading/casting checks. Use a fresh chara
 
 The supplied session logs reported zero startup/client/server script-load errors. They also contained unrelated Twisted Mobs recipes referencing `twisted_mobs:deleted_mod_element` and JEI-related errors. These observations are not proof that all integration code works, and no unrelated recipe/JEI repair is included in 0.2.1.
 
-Full dependency-resolved NeoForge compilation, exact-release binary linkage auditing, exhaustive gameplay testing, and performance benchmarking remain unestablished.
+These historical package reports did not establish full dependency-resolved
+NeoForge compilation or exact-release binary linkage. Current source validation
+is recorded separately above. Exhaustive gameplay testing and performance
+benchmarking remain unestablished.

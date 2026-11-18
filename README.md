@@ -8,6 +8,13 @@
 
 The public project name is **Arcane Syntax**. Its existing internal mod ID remains `arcane_syntax_unified` to preserve saved data, resource locations, configuration compatibility, and mod dependencies.
 
+**Unreleased source change:** component compatibility now uses the installed Build a Spell
+rules for all effects, modifiers, and deliveries, including the separate Fix mod's changes.
+The Focal Manipulator filters choices for the selected insertion point, and server validation
+rejects incompatible inscriptions/casts before payment. See the complete
+[component compatibility audit](docs/COMPONENT_COMPATIBILITY.md) and
+[validation status](docs/TESTING_STATUS.md). The published 1.2 JAR predates this change.
+
 ## Casting and progression
 
 - Learn individual concepts permanently from crafted Inscribed Runes; Blank Runes remain part of progression.
