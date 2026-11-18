@@ -4,12 +4,15 @@ plugins {
 }
 
 group = 'com.phaedrusxy'
-version = '1.2'
+version = '1.3'
 base { archivesName = 'arcane_syntax_unified' }
 java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 neoForge {
     version = '26.1.2.122'
+    // Plain JavaExec audits still need the real Minecraft/NeoForge/Mixin types.
+    // Add their classpath without enabling a game or mod-loading test bootstrap.
+    addModdingDependenciesTo sourceSets.test
     mods {
         arcane_syntax_unified { sourceSet sourceSets.main }
     }
@@ -25,7 +28,11 @@ requiredJars.each { name ->
         throw new GradleException("Missing libs/${name}. Copy the original dependency JAR into libs; do not modify it.")
     }
 }
-dependencies { compileOnly files(requiredJars.collect { "libs/${it}" }) }
+dependencies {
+    compileOnly files(requiredJars.collect { "libs/${it}" })
+    // The semantic audit executes the real supported BaS rule/enum classes.
+    testImplementation files(requiredJars.collect { "libs/${it}" })
+}
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
@@ -38,8 +45,24 @@ tasks.register('coreTest', JavaExec) {
     mainClass = 'com.phaedrusxy.arcanesyntax.core.CoreTests'
     jvmArgs '-ea'
 }
-tasks.named('check') { dependsOn tasks.named('coreTest') }
+tasks.register('compatibilityTest', JavaExec) {
+    dependsOn tasks.testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'com.phaedrusxy.arcanesyntax.bridge.ComponentCompatibilityTests'
+    jvmArgs '-ea'
+    if (providers.gradleProperty('shieldFixJar').isPresent()) {
+        classpath += files(providers.gradleProperty('shieldFixJar').get())
+        systemProperty 'arcaneSyntax.testShieldFix', 'true'
+    }
+}
+tasks.named('test') {
+    // Test sources are executable assertion suites, run by the JavaExec tasks below.
+    // Keep ordinary test discovery available without requiring a separate JUnit suite.
+    failOnNoDiscoveredTests = false
+}
+tasks.named('check') { dependsOn tasks.named('coreTest'), tasks.named('compatibilityTest') }
 tasks.named('jar') {
+    from('LICENSE') { into 'META-INF' }
     manifest.attributes(
         'Implementation-Title': 'Arcane Syntax',
         'Implementation-Version': project.version,

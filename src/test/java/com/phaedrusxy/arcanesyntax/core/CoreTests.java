@@ -36,6 +36,9 @@ public final class CoreTests {
         rejects(() -> PlanCompiler.compile(root(),32), "empty");
         rejects(() -> PlanCompiler.compile(root(n("effect/heal",1)),32), "no delivery");
         rejects(() -> PlanCompiler.compile(root(n("delivery/cast",1)),32), "no effect");
+        ok(PlanCompiler.compilePartial(root(n("delivery/cast",1)),32).instructions().isEmpty(), "editor can choose delivery before effect");
+        ok(PlanCompiler.compilePartial(mining,32).equals(plan), "partial preview preserves completed spell");
+        rejects(() -> PlanCompiler.compilePartial(root(n("delivery/self",1,n("modifier/increased_power",1))),32), "partial preview rejects leading modifier");
         rejects(() -> PlanCompiler.compile(root(n("delivery/cast",2,n("effect/heal",1))),32), "repeated delivery");
         rejects(() -> PlanCompiler.compile(root(n("delivery/cast",1,n("delivery/self",1,n("effect/heal",1)))),32), "second delivery");
         rejects(() -> PlanCompiler.compile(root(n("delivery/self",1,n("modifier/increased_area",1,n("effect/heal",1)))),32), "leading modifier");

@@ -4,9 +4,16 @@
 
 **Arcane Syntax** integrates learned Build a Spell components with Thaumaturge's native focus, wand, research, and Vis systems. It is developed alongside [Eldritch Aeons](https://github.com/PhaedrusXY/Eldritch_Aeons), while retaining its own source and release identity.
 
-**Current development version: 1.2 — experimental Thaumaturge 1.1.0 compatibility candidate.** Initial in-game testing is underway. This is source and development documentation, not an announcement of a new public Eldritch Aeons release.
+**Current development version: 1.3 — component compatibility candidate for Thaumaturge 1.1.0.** Live gameplay verification of the new validation and editor filtering remains pending. This is source and development documentation, not an announcement of a new public Eldritch Aeons release.
 
 The public project name is **Arcane Syntax**. Its existing internal mod ID remains `arcane_syntax_unified` to preserve saved data, resource locations, configuration compatibility, and mod dependencies.
+
+**1.3 candidate:** component compatibility now uses the installed Build a Spell
+rules for all effects, modifiers, and deliveries, including the separate Fix mod's changes.
+The Focal Manipulator filters choices for the selected insertion point, and server validation
+rejects incompatible inscriptions/casts before payment. See the complete
+[component compatibility audit](docs/COMPONENT_COMPATIBILITY.md) and
+[validation status](docs/TESTING_STATUS.md). The published 1.2 JAR predates this change.
 
 ## Casting and progression
 
@@ -25,6 +32,11 @@ The public project name is **Arcane Syntax**. Its existing internal mod ID remai
 ## Versioning and downloads
 
 **Current release:** [Arcane Syntax v1.2](https://github.com/PhaedrusXY/Arcane_Syntax/releases/tag/v1.2) — download `arcane_syntax_unified-1.2.jar`.
+
+**Current test candidate:** `arcane_syntax_unified-1.3.jar`, built from this source
+with Gradle. Install it in place of the older Arcane Syntax JAR on both the client
+and server. This update requires no replacement KubeJS files; keep the existing
+Eldritch Aeons scripts and the separate Build A Spell Fix installed.
 
 **Version policy:** Use two-part release numbers, starting at **1.2** and advancing to **1.3**, **1.4**, etc. Distributable JARs must follow **`arcane_syntax_unified-X.Y.jar`**; the GitHub release tag is **`vX.Y`**. The filename, embedded NeoForge mod version, Gradle version, and GitHub documentation must agree. Do not append `-fix`, `-test`, or other descriptive suffixes to JAR names. Explain changes in [CHANGELOG.md](CHANGELOG.md) and the release notes.
 
@@ -62,8 +74,22 @@ See [testing status](docs/TESTING_STATUS.md), [architecture](docs/ARCHITECTURE.m
 
 ## Source and builds
 
-The current source metadata is Arcane Syntax **1.2**. The 1.2 release JAR is an offline resource/metadata repackage of the preserved 0.2.1 compatibility candidate, corresponding to the corrected 0.2.2 development artifact; no full NeoForge recompilation or gameplay-logic change was performed. Build instructions and dependency filenames are retained with the project. Third-party dependency JARs, game saves, account files, and raw player logs are not part of this repository.
+The current source metadata is Arcane Syntax **1.3**. This candidate uses a full
+dependency-resolved Gradle build against the original supported mod JARs. Run
+`gradle build` with JDK 25 and the dependencies in `libs/`, or use `tools/build.ps1`
+on Windows. To include the original Fix handler audit, supply
+`-PshieldFixJar=/absolute/path/to/bas_shield_fix-1.1.2.jar`.
 
-The existing distributed test JAR was an **offline compatibility port**, not a complete dependency-resolved NeoForge rebuild. Historical reports record 4,656 dependency-free core assertions and 971 pack-script assertions against API-shaped mocks. These are not proof of full game compatibility. Initial user testing subsequently confirmed loading and research visibility; comprehensive casting, progression, multiplayer, and input regression testing remain open.
+The published 1.2 release JAR was an offline resource/metadata repackage of the
+preserved 0.2.1 compatibility candidate. Its historical packaging workflow is now
+manual-only so new source pushes cannot overwrite that release. Third-party
+dependency JARs, game saves, account files, and raw player logs are not part of
+this repository.
+
+Historical 0.2.1/1.2 packages were **offline compatibility ports**. Initial user
+testing confirmed loading and research visibility for those packages. The current
+source additionally passes the original-dependency compatibility audit; see
+[testing status](docs/TESTING_STATUS.md) for the distinction between automated
+checks and pending live gameplay verification.
 
 The repository contains original integration code under the [MIT License](LICENSE). Third-party mods and referenced assets retain their own licenses. This project is not an official release of Thaumaturge or Build a Spell.

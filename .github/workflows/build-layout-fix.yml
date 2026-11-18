@@ -1,14 +1,8 @@
-name: Package Arcane Syntax 1.2
+name: Legacy Arcane Syntax 1.2 packaging (manual)
 
+# Historical resource-only packager. New versions use a full Gradle build.
+# Do not let a new version's source push overwrite the published 1.2 artifact.
 on:
-  push:
-    paths:
-      - '.github/workflows/build-layout-fix.yml'
-      - 'tools/patch_focus_layout.py'
-      - 'tools/classfile.py'
-      - 'src/main/resources/META-INF/neoforge.mods.toml'
-      - 'src/main/resources/data/thaumaturge/thaumaturge/research_entry/focus_advanced.json'
-      - 'src/main/resources/data/thaumaturge/thaumaturge/research_entry/focus_greater.json'
   workflow_dispatch:
 
 permissions:

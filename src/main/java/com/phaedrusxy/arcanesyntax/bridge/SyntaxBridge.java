@@ -91,6 +91,20 @@ public final class SyntaxBridge {
         if (!known) throw new IllegalArgumentException("Learn this component first: " + entry.id());
     }
 
+    /** Client candidate check. Partial drafts are allowed; no player state or draft is changed. */
+    public static boolean compatibleDraft(Spell nativeSpell) {
+        try {
+            if (nativeSpell.style() != CastStyle.INSTANT) return false;
+            SpellPlan plan = PlanCompiler.compilePartial(readNode(nativeSpell.root(), 0, new int[]{0}),
+                    buildaspell.spell.Spell.maxComponents());
+            ComponentCompatibility.validate(plan);
+            if (IntegrationConfig.blockBreakFill()) TierRules.validateCombinations(plan);
+            return true;
+        } catch (IllegalArgumentException | IllegalStateException e) {
+            return false;
+        }
+    }
+
     public static Prepared prepare(Spell nativeSpell, Player player) {
         if (nativeSpell.style() != CastStyle.INSTANT)
             throw new IllegalArgumentException("Arcane Syntax currently supports Instant casting only.");
@@ -100,6 +114,7 @@ public final class SyntaxBridge {
             String part = Catalog.NAMESPACE + ":" + instruction.kind().name().toLowerCase(Locale.ROOT) + "/" + instruction.id();
             checkAvailable(player, Catalog.find(part).orElseThrow());
         }
+        ComponentCompatibility.validate(plan);
         if (IntegrationConfig.blockBreakFill()) TierRules.validateCombinations(plan);
         buildaspell.spell.Spell executable = BuildASpellAPI.createSpell(plan.delivery(), plan.apiComponents());
         if (executable == null || !executable.hasAnyEffect()) throw new IllegalArgumentException("Build a Spell rejected the composition.");
